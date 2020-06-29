@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#head-wp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    background-color: black;
+}
+
+#logo{
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    line-height: 45px;
+    margin-left: 50px;
+    letter-spacing: 12px;
+}
+
+#about {
+    margin-right: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.list {
+    color: white;
+}
+
+.list:not(:last-child){
+    padding-right: 70px;
+}
+
+@media (max-width: 1000px){
+    .navbar {
+        width: 400px;
+    }
+}
+
+@media (max-width: 650px){
+    .navbar {
+        width: 200px;
+    }
+}
+
