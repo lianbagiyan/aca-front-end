@@ -114,7 +114,7 @@ a{
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: gray;
+    background-color: #c5c5c5;
     justify-content: center;
     align-items: center;
 }
@@ -171,4 +171,60 @@ a{
 .salsa-btn:hover {
     border: .5px solid black;
     background-color: #ffffff00;
+}
+
+.kiz-bachata-part {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.kiz-bach-head-text {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.kiz-bachata-blocks {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.dance-photo {
+    width: 400px;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.section-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dance-name {
+    font-size: 25px;
+    letter-spacing: 15px;
+    padding: 20px 0;
+}
+
+.kiz-bach-btn {
+    border: .5px solid black;
+    background-color: white;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+}
+
+.kiz-bach-btn:hover {
+    background-color: gray;
+    color: white;
+    border: .5px solid gray;
 }
