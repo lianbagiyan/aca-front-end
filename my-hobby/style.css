@@ -389,4 +389,28 @@ body{
         letter-spacing: 7px;
         padding: 15px 0;
     }
+
+    .wp-links {
+        display: none;
+    }
+
+    .address-info, .phone-number {
+        font-size: 17px;
+    }
+
+    .phone-number {
+        padding-top: 5px;
+    }
+
+    .footer-content {
+        justify-content: center;
+    }
+
+    .legal-copyright {
+        font-size: 12px;
+    }
+
+    .author-name {
+        font-size: 17px;
+    }
 }
