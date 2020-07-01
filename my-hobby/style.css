@@ -347,6 +347,18 @@ body{
     padding-top: 20px;
 }
 
+.fb-icon:hover {
+    color: #3c5a99;
+}
+
+.instagram-icon:hover {
+    color: #e3623e;
+}
+
+.linkedin-icon:hover {
+    color: #0073af;
+}
+
 /* Sign-in part - form */
 /* body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;} */
