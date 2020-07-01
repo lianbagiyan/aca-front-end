@@ -79,8 +79,6 @@ body{
     background-attachment: fixed;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -105,6 +103,13 @@ body{
     text-align: center;
 }
 
+.main-btn{
+    width: 440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .btn-join {
     background-color: #ffffff00;
     border: .5px solid white;
@@ -112,7 +117,6 @@ body{
     color: white;
     letter-spacing: 2px;
     font-size: 18px;
-    margin-right: 15px;
 }
 
 .btn-quote{
@@ -122,7 +126,6 @@ body{
     color: #443c3c;
     letter-spacing: 2px;
     font-size: 18px;
-    margin-left: 15px;
 }
 
 .btn-quote:hover {
@@ -349,6 +352,10 @@ body{
 }
 
 @media screen and (max-width: 750px){
+    .btn-join, .btn-quote {
+        padding: 10px 20px;
+    }
+
     .about-dance-text {
         font-size: 20px;
     }
@@ -364,6 +371,23 @@ body{
 }
 
 @media screen and (max-width: 600px){
+    .main-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-quote{
+        margin-top: 10px;
+    }
+
+    .btn-join, .btn-quote {
+        width: 60%;
+    }
+
+    .about-dance-text {
+        font-size: 14px;
+    }
+
     .kiz-bach-head-text {
         font-size: 16px;
     }
