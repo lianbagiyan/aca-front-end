@@ -461,7 +461,7 @@ input[type=text], input[type=password] {
     }
 
     .list:not(:last-child) {  
-        padding-right: 45px;
+        padding-right: 35px;
     }
 
     .list-text {
@@ -471,6 +471,7 @@ input[type=text], input[type=password] {
     .main-btn {
         flex-direction: column;
         align-items: center;
+        width: 300px;
     }
 
     .btn-quote{
@@ -482,11 +483,18 @@ input[type=text], input[type=password] {
     }
 
     .btn-join, .btn-quote {
-        width: 60%;
+        width: 65%;
+        font-size: 12px;
+    }
+
+    .about-dance-p {
+        letter-spacing: 1px;
+        padding: 25px 0;
+        width: 95%;
     }
 
     .about-dance-text {
-        font-size: 14px;
+        font-size: 20px;
         width: 300px;
         text-align: center;
         padding-top: 50px;
