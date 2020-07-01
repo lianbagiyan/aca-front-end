@@ -31,10 +31,14 @@ body{
 .navbar {
     display: flex;
     justify-content: space-between;
-    width: 500px;
 }
 
-.list {
+.main-content {
+    width: 100%;
+    padding-top: 60px;
+}
+
+.list-text {
     color: white;
     font-size: 20px;
 }
@@ -43,13 +47,10 @@ body{
     padding-right: 70px;
 }
 
-.main-content {
-    
-}
-
 .arrow-down {
     position: absolute;
     bottom: 0;
+    right: 20px;
     padding-bottom: 10px;
     color: white;
     font-size: 25px;
@@ -73,13 +74,13 @@ body{
 
 .about-dance {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 60px);
     background-image: url(./photo/dance/header-dance.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .main-section-text{
@@ -352,6 +353,10 @@ body{
 }
 
 @media screen and (max-width: 750px){
+    .list:not(:last-child) {
+        padding-right: 20px;
+    }
+
     .btn-join, .btn-quote {
         padding: 10px 20px;
     }
@@ -371,6 +376,14 @@ body{
 }
 
 @media screen and (max-width: 600px){
+    .list:not(:last-child) {
+        padding-right: 12px;
+    }
+
+    .list-text {
+        font-size: 16px;
+    }
+
     .main-btn {
         flex-direction: column;
         align-items: center;
@@ -380,12 +393,19 @@ body{
         margin-top: 10px;
     }
 
+    .arrow-down {
+        display: none;
+    }
+
     .btn-join, .btn-quote {
         width: 60%;
     }
 
     .about-dance-text {
         font-size: 14px;
+        width: 300px;
+        text-align: center;
+        padding-top: 50px;
     }
 
     .kiz-bach-head-text {
