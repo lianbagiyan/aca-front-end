@@ -14,6 +14,7 @@ body{
     position: fixed;
     background-color: black;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 60px;
@@ -38,26 +39,36 @@ body{
     padding-top: 60px;
 }
 
+.active {
+    color: #d04a4a !important;
+    font-weight: bold;
+}
+
 .list-text {
     color: white;
     font-size: 20px;
+}
+
+.list-text:hover {
+    color: #de3f3f !important;
+    font-weight: bold;
 }
 
 .list:not(:last-child){
     padding-right: 70px;
 }
 
-.arrow-down {
+.arrow-up {
     position: absolute;
     bottom: 0;
     right: 20px;
     padding-bottom: 10px;
-    color: white;
+    color: black;
     font-size: 25px;
     animation-name: arrowdirection;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    z-index: 1;
+    z-index: 10;
 }
 
 @keyframes arrowdirection {
@@ -84,6 +95,7 @@ body{
 }
 
 .main-section-text{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,6 +225,7 @@ body{
     align-items: center;
     width: 100%;
     padding: 30px 0;
+    position: relative;
 }
 
 .kiz-bach-head-text {
@@ -387,17 +400,6 @@ input[type=text], input[type=password] {
     text-decoration: underline;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 1200px){
     .about-dance-text {
         font-size: 25px;
@@ -440,8 +442,15 @@ input[type=text], input[type=password] {
 }
 
 @media screen and (max-width: 600px){
-    .list:not(:last-child) {
-        padding-right: 12px;
+    #head-wp {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .list:not(:last-child) {  
+        padding-right: 45px;
     }
 
     .list-text {
@@ -457,7 +466,7 @@ input[type=text], input[type=password] {
         margin-top: 10px;
     }
 
-    .arrow-down {
+    .arrow-up {
         display: none;
     }
 
