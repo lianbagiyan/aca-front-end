@@ -12,6 +12,7 @@ body{
 .aside-content{
     width: 100%;
     background-color: black;
+    border-bottom: 1px solid #3e3737;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,12 +253,13 @@ body{
 }
 
 .kiz-bachata-blocks {
-    width: 65%;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding-top: 30px;
+    flex-wrap: wrap;
 }
 
 .photo-content {
@@ -549,6 +551,10 @@ input[type=text], input[type=password] {
         display: none;
     }
 
+    .kiz-bachata-blocks {
+        flex-direction: column;
+    }
+
     .salsa-content {
         flex-direction: column;
         align-items: center;
@@ -616,10 +622,6 @@ input[type=text], input[type=password] {
 
     .kiz-bach-head-text {
         font-size: 16px;
-    }
-
-    .kiz-bachata-blocks {
-        flex-direction: column;
     }
 
     .section-blocks {
