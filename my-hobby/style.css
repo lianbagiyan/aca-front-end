@@ -455,34 +455,43 @@ input[type=text], input[type=password] {
     text-decoration: underline;
 }
 
-/* Photos file styles */
+/* Photos file styles with GRID */
 
 .photo-container {
-    width: 100%;
-    padding-top: 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    width: 85%;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 30px;
 }
 
-.photo-name-navbar {
-    width: 200px;
-    height: max-content;
+.photo-name-items {
+    display: grid;
+    margin: 0 auto;
+    grid-auto-rows: 50px;
+    grid-gap: 8px;
 }
 
 .list-photo-name {
     background-color: #676060;
+    display: grid;
+    justify-content: center;
+    align-content: center;
     text-align: center;
-    padding: 15px;
+}
+
+.list-photo-name-active {
+    background-color: #bf5858;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
 }
 
 .list-photo-name:hover {
     box-shadow: 3px 0px 7px rgb(104, 101, 101);
-    opacity: .6;
-}
-
-.list-photo-name:not(last-child){
-    margin-bottom: 3px;
+    background-color: #bf5858;
 }
 
 .list-photo-name-text {
@@ -490,21 +499,19 @@ input[type=text], input[type=password] {
     letter-spacing: 2px;
 }
 
-.photo-grid-component {
+.photo-wrapper-component {
     display: grid;
-    grid-gap: 50px;
-    grid-template-columns: auto auto auto;
-}
-
-.photo-grid-item{
-    width: 300px;
-    height: 300px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .dance-couple-photo {
     width: 100%;
-    height: 100vh;
     object-fit: cover;
+}
+
+.dance-couple-photo:hover {
+    box-shadow: 4px 3px 10px #989292;
 }
 
 @media screen and (max-width: 1200px){
@@ -545,6 +552,18 @@ input[type=text], input[type=password] {
     .salsa-content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .photo-container {
+        grid-template-columns: auto;
+        grid-template-rows: 11% 89%;
+        grid-gap: 30px;
+    }
+    
+    .photo-name-items {
+        display: grid;
+        grid-auto-rows: 50px;
+        grid-gap: 8px;
     }
 }
 
