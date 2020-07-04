@@ -620,6 +620,22 @@ form {border: 3px solid #f1f1f1;} */
   .inputfield:last-child{
     margin-bottom: 0;
   }
+
+  .about-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #de9e9f;
+  }
+
+  .about-wrapper-component{
+      width: 555px;
+  }
+
+  .error-pic{
+    width: 100%;
+  }
   
   @media (max-width:420px) {
     .wrapper .form .inputfield{
