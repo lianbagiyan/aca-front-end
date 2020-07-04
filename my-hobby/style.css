@@ -19,13 +19,13 @@ body{
     padding: 20px 0;
 }
 
-.aside-text{
+.aside-content__text{
     color: white;
     font-weight: bold;
     letter-spacing: 5px;
 }
 
-#head-wp {
+#header-ws {
     width: 100%;
     position: sticky;
     top: 0;
@@ -38,7 +38,7 @@ body{
     z-index: 3;
 }
 
-#logo{
+.header-ws__logo {
     color: white;
     cursor: pointer;
     font-size: 1.5em;
@@ -46,7 +46,7 @@ body{
     letter-spacing: 12px;
 }
 
-.navbar {
+.navbar-items {
     display: flex;
     justify-content: space-between;
 }
@@ -55,21 +55,21 @@ body{
     width: 100%;
 }
 
-.active {
+.navbar-items__list__text_active {
     color: #d04a4a !important;
 }
 
-.list-text {
+.navbar-items__list__text {
     color: white;
     font-size: 20px;
     font-weight: bold;
 }
 
-.list-text:hover {
+.navbar-items__list__text:hover {
     color: #de3f3f !important;
 }
 
-.list:not(:last-child){
+.navbar-items__list:not(:last-child){
     padding-right: 70px;
 }
 
@@ -98,7 +98,7 @@ body{
     }
 }
 
-.about-dance {
+.dance {
     width: 100%;
     height: 100vh;
     background-image: url(./photo/dance/header-dance.jpg);
@@ -109,7 +109,7 @@ body{
     justify-content: center;
 }
 
-.main-section-text{
+.dance__quotes{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -117,13 +117,13 @@ body{
     align-items: center;
 }
 
-.about-dance-text {
+.dance__quotes__head{
     color: white;
     letter-spacing: 5px;
     font-size: 35px;
 }
 
-.about-dance-p {
+.dance__quotes__text {
     color: white;
     letter-spacing: 3px;
     width: 80%;
@@ -131,14 +131,14 @@ body{
     text-align: center;
 }
 
-.main-btn{
+.dance__quotes__btn{
     width: 440px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.btn-join {
+.dance__quotes__btn__join {
     background-color: #ffffff00;
     border: .5px solid white;
     padding: 15px 27px;
@@ -148,7 +148,7 @@ body{
     cursor: pointer;
 }
 
-.btn-quote{
+.dance__quotes__btn__quote{
     background-color: #eae2e2;
     border: .5px solid white;
     padding: 15px 27px;
@@ -158,12 +158,12 @@ body{
     font-size: 18px;
 }
 
-.btn-quote:hover {
+.dance__quotes__btn__quote:hover {
     background-color: #ffffff00;
     color: white;
 }
 
-.salsa-part {
+.salsa-dance {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -172,7 +172,7 @@ body{
     align-items: center;
 }
 
-.salsa-content {
+.salsa-dance__content {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -180,7 +180,7 @@ body{
     padding-bottom: 30px;
 }
 
-.salsa-section-head{
+.salsa-dance__head{
     text-align: center;
     font-size: 30px;
     letter-spacing: 10px;
@@ -188,15 +188,15 @@ body{
     padding: 30px 0;
 }
 
-.salsa-img-block {
+.salsa-dance__content__photo {
     width: 385px;
 }
 
-.salsa-img {
+.salsa-dance__content__photo__img {
     width: 100%;
 }
 
-.about-salsa-content{
+.salsa-dance__about{
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -204,20 +204,20 @@ body{
     align-items: center;
 }
 
-.about-salsa {
+.salsa-dance__about__head {
     color: white;
     font-size: 23px;
     letter-spacing: 2px;
 }
 
-.about-salsa-text {
+.salsa-dance__about__text {
     text-align: justify;
     font-size: 20px;
     color: white;
     padding-left: 15px;
 }
 
-.salsa-btn {
+.salsa-dance__about__btn {
     background-color: #4a4444;
     border: none;
     padding: 15px 27px;
@@ -228,15 +228,15 @@ body{
     cursor: pointer;
 }
 
-.salsa-btn:hover {
+.salsa-dance__about__btn:hover {
     box-shadow: 7px 5px 10px grey;
 }
 
-.salsa-btn:active {
+.salsa-dance__about__btn:active {
     border: none;
 }
 
-.kiz-bachata-part {
+.kiz-bach {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -245,14 +245,14 @@ body{
     padding: 30px 0;
 }
 
-.kiz-bach-head-text {
+.kiz-bach__head {
     color: black;
     text-align: center;
     font-size: 27px;
     letter-spacing: 3px;
 }
 
-.kiz-bachata-blocks {
+.kiz-bach__block{
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -262,7 +262,7 @@ body{
     flex-wrap: wrap;
 }
 
-.photo-content {
+.kiz-bach__block__content__photo {
     width: 300px;
     display: flex;
     justify-content: center;
@@ -270,7 +270,7 @@ body{
     cursor: pointer;
 }
 
-.photo-hover-text {
+.kiz-bach__block__content__photo_hover {
     display: none;
     position: absolute;
     top: 50%;
@@ -280,41 +280,41 @@ body{
     letter-spacing: 3px;
 }
 
-.photo-content:hover{
+.kiz-bach__block__content__photo:hover{
     opacity: .8;
 }
 
-.photo-content:hover .photo-hover-text{
+.kiz-bach__block__content__photo:hover .kiz-bach__block__content__photo_hover{
     display: block;
 }
 
-.dance-photo {
-    width: 100%;
+.kiz-bach__block__content__photo__img {
+    width: 90%;
     font-size: 30px;
     letter-spacing: 10px;
 }
 
-.section-blocks {
+.kiz-bach__block__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 7px;
 }
 
-.dance-name {
+.kiz-bach__block__content__head {
     font-size: 25px;
     letter-spacing: 15px;
     padding: 20px 0;
 }
 
-.kiz-bach-btn {
+.kiz-bach__block__content__btn {
     border: .5px solid black;
     background-color: white;
     padding: 10px 30px;
     letter-spacing: 2px;
 }
 
-.kiz-bach-btn:hover {
+.kiz-bach__block__content__btn:hover {
     background-color: gray;
     color: white;
     border: .5px solid gray;
@@ -330,83 +330,78 @@ body{
     align-items: center;
 }
 
-.footer-content {
+.footer__content {
     display: flex;
     flex-direction: row;
     width: 60%;
     justify-content: space-between;
 }
 
-.footer-list {
+.footer__content__navbar__block__list {
     padding-bottom: 10px;
 }
 
-.footer-list:hover {
+.footer__content__navbar__block__list:hover {
     text-decoration: underline;
 }
 
-.footer-info {
+.footer__content__info {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.address-info, .phone-number {
+.footer__content__info__address, .footer__content__info__number {
     color: white;
     font-size: 20px;
 }
 
-.footer-list-name {
+.footer__content__navbar__block__list__name {
     color: white;
     font-size: 20px;
     letter-spacing: 2px;
 }
 
-.social-sites {
+.footer__socsites{
     padding-top: 30px;
 }
 
-.link-icon:not(:last-child){
+.footer__socsites__icon:not(:last-child){
     padding-right: 20px;
 }
 
-.social-sites-icon{
+.footer__socsites__icon{
     color: white;
-}
-
-.link-icon{
     font-size: 30px;
 }
 
-.legal-copyright {
+.footer__legal-copyright {
     color: #afa5a5;
     letter-spacing: 1px;
     padding-top: 25px;
 }
 
-.author-name {
+.footer__author-name{
     color: rgb(146, 151, 124);
     letter-spacing: 2px;
     font-size: 20px;
     padding-top: 20px;
 }
 
-.fb-icon:hover {
+.footer__socsites__fbicon:hover {
     color: #3c5a99;
 }
 
-.instagram-icon:hover {
+.footer__socsites__insticon:hover {
     color: #e3623e;
 }
 
-.linkedin-icon:hover {
+.footer__socsites__inicon:hover {
     color: #0073af;
 }
 
 /* Sign-in part - form */
-/* body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;} */
 
 .form {
     width: 100%;
@@ -629,11 +624,11 @@ form {border: 3px solid #f1f1f1;} */
     background-color: #de9e9f;
   }
 
-  .about-wrapper-component{
+  .about-wrapper__block{
       width: 555px;
   }
 
-  .error-pic{
+  .about-wrapper__block__pic{
     width: 100%;
   }
   
@@ -651,45 +646,45 @@ form {border: 3px solid #f1f1f1;} */
   }
 
 @media screen and (max-width: 1200px){
-    .about-dance-text {
+    .dance__quotes__head {
         font-size: 25px;
     }
 
-    .about-salsa-text {
+    .salsa-dance__about__text {
         font-size: 15px;
     }
 
-    .salsa-content {
+    .salsa-dance__content {
         width: 95%;
     }
 
-    .salsa-btn {
+    .salsa-dance__about__btn {
         padding: 10px 20px;
     }
 }
 
-@media screen and (max-width: 750px){
-    .list:not(:last-child) {
+@media screen and (max-width: 768px){
+    .navbar-items__list:not(:last-child) {
         padding-right: 20px;
     }
 
-    .btn-join, .btn-quote {
+    .dance__quotes__btn__join, .dance__quotes__btn__quote{
         padding: 10px 20px;
     }
 
-    .about-dance-text {
+    .dance__quotes__head {
         font-size: 20px;
     }
 
-    .about-salsa-text, .about-salsa{
+    .salsa-dance__about__text, .salsa-dance__about__head{
         display: none;
     }
 
-    .kiz-bachata-blocks {
+    .kiz-bach__block {
         flex-direction: column;
     }
 
-    .salsa-content {
+    .salsa-dance__content {
         flex-direction: column;
         align-items: center;
     }
@@ -706,29 +701,29 @@ form {border: 3px solid #f1f1f1;} */
     }
 }
 
-@media screen and (max-width: 600px){
-    #head-wp {
+@media screen and (max-width: 576px){
+    #header-ws {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100px;
     }
 
-    .list:not(:last-child) {  
+    .navbar-items__list:not(:last-child) {  
         padding-right: 35px;
     }
 
-    .list-text {
+    .navbar-items__list__text {
         font-size: 16px;
     }
 
-    .main-btn {
+    .dance__quotes__btn{
         flex-direction: column;
         align-items: center;
         width: 300px;
     }
 
-    .btn-quote{
+    .dance__quotes__btn__quote{
         margin-top: 10px;
     }
 
@@ -736,71 +731,71 @@ form {border: 3px solid #f1f1f1;} */
         display: none;
     }
 
-    .btn-join, .btn-quote {
+    .dance__quotes__btn__join, .dance__quotes__btn__quote {
         width: 65%;
         font-size: 12px;
     }
 
-    .about-dance-p {
+    .dance__quotes__text {
         letter-spacing: 1px;
         padding: 25px 0;
         width: 95%;
     }
 
-    .about-dance-text {
+    .dance__quotes__head {
         font-size: 20px;
         width: 300px;
         text-align: center;
         padding-top: 50px;
     }
 
-    .kiz-bach-head-text {
+    .kiz-bach__head {
         font-size: 16px;
     }
 
-    .section-blocks {
+    .kiz-bach__block__content {
         width: 100%;
     }
 
-    .kiz-bach-btn {
+    .kiz-bach__block__content__btn {
         margin-bottom: 20px;
     }
 
-    .dance-name {   
+    .kiz-bach__block__content__head {   
         font-size: 20px;
         letter-spacing: 7px;
         padding: 15px 0;
     }
 
-    .wp-links {
+    .footer__content__navbar{
         display: none;
     }
 
-    .address-info, .phone-number {
+    .footer__content__info__address, .footer__content__info__number {
         font-size: 17px;
     }
 
-    .phone-number {
+    .footer__content__info__number {
         padding-top: 5px;
     }
 
-    .footer-content {
+    .footer__content {
         justify-content: center;
     }
 
-    .legal-copyright {
+    .footer__legal-copyright{
         font-size: 12px;
     }
 
-    .author-name {
+    .footer__author-name{
         font-size: 17px;
     }
 
-    .salsa-img-block {
+    .salsa-dance__content__photo {
         width: 290px;
     }
 
-    .salsa-section-head {
+    .salsa-dance__head {
         font-size: 25px;
     }
 }
