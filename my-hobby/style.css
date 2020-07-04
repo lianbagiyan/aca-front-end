@@ -472,7 +472,7 @@ body{
 
 /* Photos file styles with GRID */
 
-.photo-container {
+.photo {
     width: 85%;
     margin: 0 auto;
     padding: 50px 0;
@@ -481,14 +481,14 @@ body{
     grid-gap: 30px;
 }
 
-.photo-name-items {
+.photo__navbar__block__items {
     display: grid;
     margin: 0 auto;
     grid-auto-rows: 50px;
     grid-gap: 8px;
 }
 
-.list-photo-name {
+.photo__navbar__block__items__list {
     background-color: #676060;
     display: grid;
     justify-content: center;
@@ -496,36 +496,32 @@ body{
     text-align: center;
 }
 
-.list-photo-name-active {
+.photo__navbar__block__items__list_active {
     background-color: #bf5858;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
 }
 
-.list-photo-name:hover {
+.photo__navbar__block__items__list:hover {
     box-shadow: 3px 0px 7px rgb(104, 101, 101);
     background-color: #bf5858;
 }
 
-.list-photo-name-text {
+.photo__navbar__block__items__list__text {
     color: white;
     letter-spacing: 2px;
 }
 
-.photo-wrapper-component {
+.photo-wrapper__block {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.dance-couple-photo {
+.photo-wrapper__block__item__photo {
     width: 100%;
     object-fit: cover;
 }
 
-.dance-couple-photo:hover {
+.photo-wrapper__block__item__photo:hover {
     box-shadow: 4px 3px 10px #989292;
 }  
 
@@ -689,12 +685,12 @@ body{
         align-items: center;
     }
 
-    .photo-container {
+    .photo {
         grid-template-columns: auto;
         grid-gap: 30px;
     }
     
-    .photo-name-items {
+    .photo__navbar__block__items {
         display: grid;
         grid-auto-rows: 50px;
         grid-gap: 8px;
