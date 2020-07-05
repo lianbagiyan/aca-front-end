@@ -411,12 +411,12 @@ body{
     padding: 100px 0 40px 0;
 }
 
-.form-content {
+.form__block {
     width: 300px;
 
 }
 
-.input-content {
+.form__block__container__input{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -425,7 +425,7 @@ body{
     box-sizing: border-box;
 }
 
-.login-btn {
+.form__block__container__btn {
     background-color: #4a4e4a;
     color: white;
     padding: 14px 20px;
@@ -435,39 +435,44 @@ body{
     width: 100%;
 }
 
-.register-block {
+.form__block__container__register {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.register-text {
+.form__block__container__register__text {
     color: #a93e3e;
     font-size: 22px;
     letter-spacing: 2px;
     font-weight: 700;
 }
 
-.register-text:hover {
+.form__block__container__register__text:hover {
     text-decoration: underline;
 }
 
-.login-btn:hover {
+.form__block__container__btn:hover {
     opacity: 0.8;
 }
 
-.container {
+.form__block__container {
     padding: 16px;
 }
 
-.form-last-part{
+.form__block__container__footer{
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
 }
 
-.forgot-psw{
+.form__block__container__footer__psw{
+    width: 165px;
+}
+
+.form__block__container__footer__psw__text{
     text-decoration: underline;
+    color: rgb(138, 138, 197);
 } 
 
 /* Photos file styles with GRID */
@@ -526,8 +531,13 @@ body{
 }  
 
 /* Registration form styles */
+#main-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-.register-wrapper{
+.wrapper{
     max-width: 500px;
     background-color: #e2dddd61;
     width: 100%;
@@ -536,7 +546,7 @@ body{
     padding: 30px;
   }
   
-  .title{
+  .wrapper-title{
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
@@ -549,20 +559,20 @@ body{
     width: 100%;
   }
   
-  .inputfield{
+  .register-form__field{
     margin-bottom: 15px;
     display: flex;
     align-items: center;
   }
   
-  label{
+  .register-form__field__label{
      width: 200px;
      color: #757575;
      margin-right: 10px;
     font-size: 14px;
   }
   
- .input{
+ .register-form__field__input{
     width: 100%;
     outline: none;
     border: 1px solid #d5dbd9;
@@ -572,13 +582,13 @@ body{
     transition: all 0.3s ease;
   }
   
-  .custom_select{
+  .register-form__field__select{
     position: relative;
     width: 100%;
     height: 37px;
   }
   
-  .custom_select:before{
+  .register-form__field__select:before{
     content: "";
     position: absolute;
     top: 12px;
@@ -588,7 +598,7 @@ body{
     pointer-events: none;
   }
   
- .custom_select select{
+ .register-form__field__select .register-form__field__select__option{
     -webkit-appearance: none;
     -moz-appearance:   none;
     appearance:        none;
@@ -602,13 +612,7 @@ body{
     border-radius: 3px;
   }
   
-  
-  .input:focus, 
-  .custom_select select:focus{
-    border: 1px solid #fec107;
-  }
-  
-  .inputfield:last-child{
+  .register-form__field:last-child{
     margin-bottom: 0;
   }
 
@@ -627,18 +631,20 @@ body{
   .about-wrapper__block__pic{
     width: 100%;
   }
-  
-  @media (max-width:420px) {
-    .wrapper .form .inputfield{
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .wrapper .form .inputfield label{
-      margin-bottom: 5px;
-    }
-    .wrapper .form .inputfield.terms{
-      flex-direction: row;
-    }
+
+  .register-form__block{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  .register-form__block__btn {
+    background-color: #d04a4a;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
   }
 
 @media screen and (max-width: 1200px){
@@ -793,5 +799,18 @@ body{
 
     .salsa-dance__head {
         font-size: 25px;
+    }
+
+    .form {
+        padding: 70px 0 40px 0;
+    }
+
+    .wrapper {
+        background-color: white;
+        box-shadow: none;
+    }
+
+    .register-form__field__label {
+        width: 72px;
     }
 }
