@@ -270,7 +270,7 @@ body{
     cursor: pointer;
 }
 
-.kiz-bach__block__content__photo_hover {
+.kiz-bach__block__content__photo--hover {
     display: none;
     position: absolute;
     top: 50%;
@@ -284,7 +284,7 @@ body{
     opacity: .8;
 }
 
-.kiz-bach__block__content__photo:hover .kiz-bach__block__content__photo_hover{
+.kiz-bach__block__content__photo:hover .kiz-bach__block__content__photo--hover{
     display: block;
 }
 
@@ -466,13 +466,13 @@ body{
     justify-content: space-between;
 }
 
-.form__block__container__footer__psw{
-    width: 165px;
-}
-
 .form__block__container__footer__psw__text{
     text-decoration: underline;
     color: rgb(138, 138, 197);
+} 
+
+.form__block__container__footer__psw__text:hover {
+    color: rgb(183, 75, 75);
 } 
 
 /* Photos file styles with GRID */
