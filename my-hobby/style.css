@@ -55,7 +55,7 @@ body{
     width: 100%;
 }
 
-.navbar-items__list__text_active {
+.navbar-items__list__text--active {
     color: #d04a4a !important;
 }
 
@@ -501,7 +501,7 @@ body{
     text-align: center;
 }
 
-.photo__navbar__block__items__list_active {
+.photo__navbar__block__items__list--active {
     background-color: #bf5858;
 }
 
@@ -572,6 +572,10 @@ body{
     font-size: 14px;
   }
   
+  .register-form__field__terms{
+      width: 200px !important;
+  }
+
  .register-form__field__input{
     width: 100%;
     outline: none;
@@ -812,5 +816,9 @@ body{
 
     .register-form__field__label {
         width: 72px;
+    }
+
+    .register-form__field__terms {
+        width: 200px !important;
     }
 }
