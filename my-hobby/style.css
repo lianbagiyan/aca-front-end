@@ -131,14 +131,14 @@ body {
     text-align: center;
 }
 
-.dance__quotes__btn {
+.dance__btn {
     width: 440px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.dance__quotes__btn__join {
+.dance__btn__join {
     background-color: #ffffff00;
     border: .5px solid white;
     padding: 15px 27px;
@@ -148,7 +148,7 @@ body {
     cursor: pointer;
 }
 
-.dance__quotes__btn__quote {
+.dance__btn__quote {
     background-color: #eae2e2;
     border: .5px solid white;
     padding: 15px 27px;
@@ -158,7 +158,7 @@ body {
     font-size: 18px;
 }
 
-.dance__quotes__btn__quote:hover {
+.dance__btn__quote:hover {
     background-color: #ffffff00;
     color: white;
 }
@@ -217,7 +217,7 @@ body {
     padding-left: 15px;
 }
 
-.salsa-dance__about__btn {
+.salsa-dance__btn {
     background-color: #4a4444;
     border: none;
     padding: 15px 27px;
@@ -228,11 +228,11 @@ body {
     cursor: pointer;
 }
 
-.salsa-dance__about__btn:hover {
+.salsa-dance__btn:hover {
     box-shadow: 7px 5px 10px grey;
 }
 
-.salsa-dance__about__btn:active {
+.salsa-dance__btn:active {
     border: none;
 }
 
@@ -262,7 +262,7 @@ body {
     flex-wrap: wrap;
 }
 
-.kiz-bach__block__content__photo {
+.kiz-bach__content__photo {
     width: 300px;
     display: flex;
     justify-content: center;
@@ -270,7 +270,7 @@ body {
     cursor: pointer;
 }
 
-.kiz-bach__block__content__photo--hover {
+.kiz-bach__content__photo--hover {
     display: none;
     position: absolute;
     top: 50%;
@@ -280,41 +280,41 @@ body {
     letter-spacing: 3px;
 }
 
-.kiz-bach__block__content__photo:hover{
+.kiz-bach__content__photo:hover{
     opacity: .8;
 }
 
-.kiz-bach__block__content__photo:hover .kiz-bach__block__content__photo--hover {
+.kiz-bach__content__photo:hover .kiz-bach__content__photo--hover {
     display: block;
 }
 
-.kiz-bach__block__content__photo__img {
+.kiz-bach__content__img {
     width: 90%;
     font-size: 30px;
     letter-spacing: 10px;
 }
 
-.kiz-bach__block__content {
+.kiz-bach__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 7px;
 }
 
-.kiz-bach__block__content__head {
+.kiz-bach__content__head {
     font-size: 25px;
     letter-spacing: 15px;
     padding: 20px 0;
 }
 
-.kiz-bach__block__content__btn {
+.kiz-bach__btn {
     border: .5px solid black;
     background-color: white;
     padding: 10px 30px;
     letter-spacing: 2px;
 }
 
-.kiz-bach__block__content__btn:hover {
+.kiz-bach__btn:hover {
     background-color: gray;
     color: white;
     border: .5px solid gray;
@@ -337,11 +337,11 @@ body {
     justify-content: space-between;
 }
 
-.footer__content__navbar__block__list {
+.footer__navbar__list {
     padding-bottom: 10px;
 }
 
-.footer__content__navbar__block__list__name:hover {
+.footer__navbar__text:hover {
     text-decoration: underline;
     color: #a83b2c;
 }
@@ -358,7 +358,7 @@ body {
     font-size: 20px;
 }
 
-.footer__content__navbar__block__list__name {
+.footer__navbar__text {
     color: white;
     font-size: 20px;
     letter-spacing: 2px;
@@ -653,7 +653,7 @@ body {
         width: 95%;
     }
 
-    .salsa-dance__about__btn {
+    .salsa-dance__btn {
         padding: 10px 20px;
     }
 }
@@ -663,7 +663,7 @@ body {
         padding-right: 20px;
     }
 
-    .dance__quotes__btn__join, .dance__quotes__btn__quote {
+    .dance__btn__join, .dance__btn__quote {
         padding: 10px 20px;
     }
 
@@ -712,13 +712,13 @@ body {
         font-size: 16px;
     }
 
-    .dance__quotes__btn {
+    .dance__btn {
         flex-direction: column;
         align-items: center;
         width: 300px;
     }
 
-    .dance__quotes__btn__quote {
+    .dance__btn__quote {
         margin-top: 10px;
     }
 
@@ -726,7 +726,7 @@ body {
         display: none;
     }
 
-    .dance__quotes__btn__join, .dance__quotes__btn__quote {
+    .dance__btn__join, .dance__btn__quote {
         width: 65%;
         font-size: 12px;
     }
@@ -748,21 +748,21 @@ body {
         font-size: 16px;
     }
 
-    .kiz-bach__block__content {
+    .kiz-bach__content {
         width: 100%;
     }
 
-    .kiz-bach__block__content__btn {
+    .kiz-bach__btn {
         margin-bottom: 20px;
     }
 
-    .kiz-bach__block__content__head {   
+    .kiz-bach__content__head {   
         font-size: 20px;
         letter-spacing: 7px;
         padding: 15px 0;
     }
 
-    .footer__content__navbar {
+    .footer__navbar {
         display: none;
     }
 
