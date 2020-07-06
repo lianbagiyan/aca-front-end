@@ -341,8 +341,9 @@ body {
     padding-bottom: 10px;
 }
 
-.footer__content__navbar__block__list:hover {
+.footer__content__navbar__block__list__name:hover {
     text-decoration: underline;
+    color: #a83b2c;
 }
 
 .footer__content__info {
@@ -383,10 +384,11 @@ body {
 }
 
 .footer__author-name {
-    color: rgb(146, 151, 124);
-    letter-spacing: 2px;
+    color: rgb(210, 45, 45);
+    letter-spacing: 3px;
     font-size: 20px;
     padding-top: 20px;
+    font-weight: 700;
 }
 
 .footer__socsites__fbicon:hover {
