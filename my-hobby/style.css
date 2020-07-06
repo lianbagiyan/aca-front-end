@@ -377,13 +377,13 @@ body {
     font-size: 30px;
 }
 
-.footer__legal-copyright {
+.footer__copyright {
     color: #afa5a5;
     letter-spacing: 1px;
     padding-top: 25px;
 }
 
-.footer__author-name {
+.footer__author {
     color: rgb(210, 45, 45);
     letter-spacing: 3px;
     font-size: 20px;
@@ -593,16 +593,6 @@ body {
     height: 37px;
 }
   
-.register-form__field__select:before {
-    content: "";
-    position: absolute;
-    top: 12px;
-    right: 10px;
-    border: 8px solid;
-    border-color: #d5dbd9 transparent transparent transparent;
-    pointer-events: none;
-}
-  
 .register-form__field__select .register-form__field__select__option {
     appearance: none;
     outline: none;
@@ -788,11 +778,11 @@ body {
         justify-content: center;
     }
 
-    .footer__legal-copyright {
+    .footer__copyright {
         font-size: 12px;
     }
 
-    .footer__author-name {
+    .footer__author {
         font-size: 17px;
     }
 
