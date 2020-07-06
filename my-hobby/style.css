@@ -566,18 +566,18 @@ body {
     align-items: center;
 }
   
-.register-form__field__label {
+.register-form__label {
     width: 200px;
     color: #757575;
     margin-right: 10px;
     font-size: 14px;
 }
   
-.register-form__field__terms {
+.register-form__terms {
     width: 200px !important;
 }
 
-.register-form__field__input {
+.register-form__input {
     width: 100%;
     outline: none;
     border: 1px solid #d5dbd9;
@@ -587,13 +587,13 @@ body {
     transition: all 0.3s ease;
 }
   
-.register-form__field__select {
+.register-form__select {
     position: relative;
     width: 100%;
     height: 37px;
 }
   
-.register-form__field__select .register-form__field__select__option {
+.register-form__select .register-form__select__option {
     appearance: none;
     outline: none;
     width: 100%;
@@ -803,11 +803,11 @@ body {
         box-shadow: none;
     }
 
-    .register-form__field__label {
+    .register-form__label {
         width: 72px;
     }
 
-    .register-form__field__terms {
+    .register-form__terms {
         width: 200px !important;
     }
 }
