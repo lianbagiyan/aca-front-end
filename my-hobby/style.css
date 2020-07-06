@@ -55,17 +55,17 @@ body {
     width: 100%;
 }
 
-.navbar-items__list__text--active {
+.navbar-items__list--active {
     color: #d04a4a !important;
 }
 
-.navbar-items__list__text {
+.navbar-items__text {
     color: white;
     font-size: 20px;
     font-weight: bold;
 }
 
-.navbar-items__list__text:hover {
+.navbar-items__text:hover {
     color: #de3f3f !important;
 }
 
@@ -708,7 +708,7 @@ body {
         padding-right: 35px;
     }
 
-    .navbar-items__list__text {
+    .navbar-items__text {
         font-size: 16px;
     }
 
