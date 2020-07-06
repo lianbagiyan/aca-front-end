@@ -417,7 +417,7 @@ body {
     width: 300px;
 }
 
-.form__block__container__input {
+.form__container__input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -426,7 +426,7 @@ body {
     box-sizing: border-box;
 }
 
-.form__block__container__btn {
+.form__container__btn {
     background-color: #4a4e4a;
     color: white;
     padding: 14px 20px;
@@ -436,43 +436,43 @@ body {
     width: 100%;
 }
 
-.form__block__container__register {
+.form__container__register {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.form__block__container__register__text {
+.form__container__register__text {
     color: #a93e3e;
     font-size: 22px;
     letter-spacing: 2px;
     font-weight: 700;
 }
 
-.form__block__container__register__text:hover {
+.form__container__register__text:hover {
     text-decoration: underline;
 }
 
-.form__block__container__btn:hover {
+.form__container__btn:hover {
     opacity: 0.8;
 }
 
-.form__block__container {
+.form__container {
     padding: 16px;
 }
 
-.form__block__container__footer {
+.form__footer {
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
 }
 
-.form__block__container__footer__psw__text {
+.form__footer__text {
     text-decoration: underline;
     color: rgb(138, 138, 197);
 } 
 
-.form__block__container__footer__psw__text:hover {
+.form__footer__text:hover {
     color: rgb(183, 75, 75);
 } 
 

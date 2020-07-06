@@ -31,26 +31,25 @@
         </nav>
     </header>
 
-
     <main class="form">
         <section class="form__block">
             <form action="/action_page.php" method="post">
-                <div class="form__block__container">
+                <div class="form__container">
                     <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" class="form__block__container__input">
+                    <input type="text" placeholder="Enter Username" name="uname" class="form__container__input">
 
                     <label><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" class="form__block__container__input">
+                    <input type="password" placeholder="Enter Password" name="psw" class="form__container__input">
 
-                    <button type="submit" class="form__block__container__btn">Login</button>
-                    <div class="form__block__container__footer">
+                    <button type="submit" class="form__container__btn">Login</button>
+                    <div class="form__footer">
                         <label>
                             <input type="checkbox" checked="checked" name="remember"> Remember me
                         </label>
-                        <span class="form__block__container__footer__psw"><a href="error.html" class="form__block__container__footer__psw__text">Forgot password?</a></span>
+                        <span class="form__footer__psw"><a href="error.html" class="form__footer__text">Forgot password?</a></span>
                     </div>
-                    <div class="form__block__container__register">
-                        <a class="form__block__container__register__text" href="register.html">Registration</a>
+                    <div class="form__container__register">
+                        <a class="form__container__register__text" href="register.html">Registration</a>
                     </div>
                 </div>
             </form>
@@ -60,13 +59,13 @@
     <footer class="footer">
         <a href="#main" class="arrow-up"><i class="fa fa-chevron-up"></i></a>
         <div class="footer__content">
-            <div class="footer__content__navbar">
-                <nav>
-                    <ul class="footer__content__navbar__block">
-                        <li class="footer__content__navbar__block__list"><a href="#" class="footer__content__navbar__block__list__name">Home</a></li>
-                        <li class="footer__content__navbar__block__list"><a href="#" class="footer__content__navbar__block__list__name">Photos</a></li>
-                        <li class="footer__content__navbar__block__list"><a href="#" class="footer__content__navbar__block__list__name">About</a></li>
-                        <li class="footer__content__navbar__block__list"><a href="#" class="footer__content__navbar__block__list__name">Sign in</a></li>
+            <div>
+                <nav class="footer__navbar">
+                    <ul class="footer__navbar__block">
+                        <li class="footer__navbar__list"><a href="#" class="footer__navbar__text">Home</a></li>
+                        <li class="footer__navbar__list"><a href="#" class="footer__navbar__text">Photos</a></li>
+                        <li class="footer__navbar__list"><a href="#" class="footer__navbar__text">About</a></li>
+                        <li class="footer__navbar__list"><a href="#" class="footer__navbar__text">Sign in</a></li>
                     </ul>
                 </nav>
             </div>
