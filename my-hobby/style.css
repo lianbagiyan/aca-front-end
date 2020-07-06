@@ -5,11 +5,11 @@
     text-decoration: none;
 }
 
-body{
+body {
     margin: 0;
 }
 
-.aside-content{
+.aside-content {
     width: 100%;
     background-color: black;
     border-bottom: 1px solid #3e3737;
@@ -19,7 +19,7 @@ body{
     padding: 20px 0;
 }
 
-.aside-content__text{
+.aside-content__text {
     color: white;
     font-weight: bold;
     letter-spacing: 5px;
@@ -69,7 +69,7 @@ body{
     color: #de3f3f !important;
 }
 
-.navbar-items__list:not(:last-child){
+.navbar-items__list:not(:last-child) {
     padding-right: 70px;
 }
 
@@ -101,7 +101,7 @@ body{
 .dance {
     width: 100%;
     height: 100vh;
-    background-image: url(./photo/dance/header-dance.jpg);
+    background-image: url(./assets/dance/header-dance.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -109,7 +109,7 @@ body{
     justify-content: center;
 }
 
-.dance__quotes{
+.dance__quotes {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@ body{
     align-items: center;
 }
 
-.dance__quotes__head{
+.dance__quotes__head {
     color: white;
     letter-spacing: 5px;
     font-size: 35px;
@@ -131,7 +131,7 @@ body{
     text-align: center;
 }
 
-.dance__quotes__btn{
+.dance__quotes__btn {
     width: 440px;
     display: flex;
     flex-direction: row;
@@ -148,7 +148,7 @@ body{
     cursor: pointer;
 }
 
-.dance__quotes__btn__quote{
+.dance__quotes__btn__quote {
     background-color: #eae2e2;
     border: .5px solid white;
     padding: 15px 27px;
@@ -180,7 +180,7 @@ body{
     padding-bottom: 30px;
 }
 
-.salsa-dance__head{
+.salsa-dance__head {
     text-align: center;
     font-size: 30px;
     letter-spacing: 10px;
@@ -252,7 +252,7 @@ body{
     letter-spacing: 3px;
 }
 
-.kiz-bach__block{
+.kiz-bach__block {
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -284,7 +284,7 @@ body{
     opacity: .8;
 }
 
-.kiz-bach__block__content__photo:hover .kiz-bach__block__content__photo--hover{
+.kiz-bach__block__content__photo:hover .kiz-bach__block__content__photo--hover {
     display: block;
 }
 
@@ -320,7 +320,7 @@ body{
     border: .5px solid gray;
 }
 
-.footer{
+.footer {
     position: relative;
     width: 100%;
     background-color: black;
@@ -367,11 +367,11 @@ body{
     padding-top: 30px;
 }
 
-.footer__socsites__icon:not(:last-child){
+.footer__socsites__icon:not(:last-child) {
     padding-right: 20px;
 }
 
-.footer__socsites__icon{
+.footer__socsites__icon {
     color: white;
     font-size: 30px;
 }
@@ -382,7 +382,7 @@ body{
     padding-top: 25px;
 }
 
-.footer__author-name{
+.footer__author-name {
     color: rgb(146, 151, 124);
     letter-spacing: 2px;
     font-size: 20px;
@@ -413,10 +413,9 @@ body{
 
 .form__block {
     width: 300px;
-
 }
 
-.form__block__container__input{
+.form__block__container__input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -460,13 +459,13 @@ body{
     padding: 16px;
 }
 
-.form__block__container__footer{
+.form__block__container__footer {
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
 }
 
-.form__block__container__footer__psw__text{
+.form__block__container__footer__psw__text {
     text-decoration: underline;
     color: rgb(138, 138, 197);
 } 
@@ -537,46 +536,46 @@ body{
     justify-content: center;
 }
 
-.wrapper{
+.wrapper {
     max-width: 500px;
     background-color: #e2dddd61;
     width: 100%;
     margin: 50px auto;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
     padding: 30px;
-  }
+}
   
-  .wrapper-title{
+.wrapper-title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
     color: gray;
     text-transform: uppercase;
     text-align: center;
-  }
+}
   
-  .register-form{
+.register-form {
     width: 100%;
-  }
+}
   
-  .register-form__field{
+.register-form__field {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
-  }
+}
   
-  .register-form__field__label{
-     width: 200px;
-     color: #757575;
-     margin-right: 10px;
+.register-form__field__label {
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
     font-size: 14px;
-  }
+}
   
-  .register-form__field__terms{
-      width: 200px !important;
-  }
+.register-form__field__terms {
+    width: 200px !important;
+}
 
- .register-form__field__input{
+.register-form__field__input {
     width: 100%;
     outline: none;
     border: 1px solid #d5dbd9;
@@ -584,15 +583,15 @@ body{
     padding: 8px 10px;
     border-radius: 3px;
     transition: all 0.3s ease;
-  }
+}
   
-  .register-form__field__select{
+.register-form__field__select {
     position: relative;
     width: 100%;
     height: 37px;
-  }
+}
   
-  .register-form__field__select:before{
+.register-form__field__select:before {
     content: "";
     position: absolute;
     top: 12px;
@@ -600,12 +599,10 @@ body{
     border: 8px solid;
     border-color: #d5dbd9 transparent transparent transparent;
     pointer-events: none;
-  }
+}
   
- .register-form__field__select .register-form__field__select__option{
-    -webkit-appearance: none;
-    -moz-appearance:   none;
-    appearance:        none;
+.register-form__field__select .register-form__field__select__option {
+    appearance: none;
     outline: none;
     width: 100%;
     height: 100%;
@@ -614,44 +611,44 @@ body{
     font-size: 15px;
     border: 1px solid #d5dbd9;
     border-radius: 3px;
-  }
+}
   
-  .register-form__field:last-child{
+.register-form__field:last-child {
     margin-bottom: 0;
-  }
+}
 
-  .about-wrapper {
+.about-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #de9e9f;
-  }
+}
 
-  .about-wrapper__block{
+.about-wrapper__block {
       width: 555px;
-  }
+}
 
-  .about-wrapper__block__pic{
+.about-wrapper__block__pic {
     width: 100%;
-  }
+}
 
-  .register-form__block{
+.register-form__block {
       width: 100%;
       display: flex;
       justify-content: center;
-  }
+}
 
-  .register-form__block__btn {
+.register-form__block__btn {
     background-color: #d04a4a;
     border: none;
     padding: 15px 30px;
     color: white;
     font-size: 15px;
     letter-spacing: 2px;
-  }
+}
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
     .dance__quotes__head {
         font-size: 25px;
     }
@@ -669,12 +666,12 @@ body{
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .navbar-items__list:not(:last-child) {
         padding-right: 20px;
     }
 
-    .dance__quotes__btn__join, .dance__quotes__btn__quote{
+    .dance__quotes__btn__join, .dance__quotes__btn__quote {
         padding: 10px 20px;
     }
 
@@ -707,7 +704,7 @@ body{
     }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
     #header-ws {
         flex-direction: column;
         justify-content: center;
@@ -723,13 +720,13 @@ body{
         font-size: 16px;
     }
 
-    .dance__quotes__btn{
+    .dance__quotes__btn {
         flex-direction: column;
         align-items: center;
         width: 300px;
     }
 
-    .dance__quotes__btn__quote{
+    .dance__quotes__btn__quote {
         margin-top: 10px;
     }
 
@@ -773,7 +770,7 @@ body{
         padding: 15px 0;
     }
 
-    .footer__content__navbar{
+    .footer__content__navbar {
         display: none;
     }
 
@@ -789,11 +786,11 @@ body{
         justify-content: center;
     }
 
-    .footer__legal-copyright{
+    .footer__legal-copyright {
         font-size: 12px;
     }
 
-    .footer__author-name{
+    .footer__author-name {
         font-size: 17px;
     }
 
