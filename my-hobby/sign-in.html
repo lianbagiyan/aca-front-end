@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Social dance community">
+    <meta name="keywords" content="Social dance, kizomba, bachata, salsa">
+    <meta name="author" content="Liana Baghiyan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Sign In" />
+    <meta property="og:description" content="Sign In your page." />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1562694909-3d53309d5e14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+    <title>Dance</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <aside class="aside-content">
+        <p class="aside-content__text">Black Lives Matter.</p>
+    </aside>
+    <header id="header-ws">
+        <a class="header-ws__logo" href="index.html">DANCE</a>
+        <nav>
+            <ul class="navbar-items">
+                <li class="navbar-items__list"><a href="index.html" class="navbar-items__text">Home</a></li>
+                <li class="navbar-items__list"><a href="photos.html" class="navbar-items__text">Photos</a></li>
+                <li class="navbar-items__list"><a href="about.html" class="navbar-items__text">About</a></li>
+                <li class="navbar-items__list"><a href="sign-in.html" class="navbar-items__text  navbar-items__list--active">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form">
+        <section class="form__block">
+            <form action="/action_page.php" method="post">
+                <div class="form__container">
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" class="form__container__input">
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" class="form__container__input">
+
+                    <button type="submit" class="form__container__btn">Login</button>
+                    <div class="form__footer">
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                        <span class="form__footer__psw"><a href="error.html" class="form__footer__text">Forgot password?</a></span>
+                    </div>
+                    <div class="form__container__register">
+                        <a class="form__container__register__text" href="register.html">Registration</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#header-ws" class="arrow-up"><i class="fa fa-chevron-up"></i></a>
+        <div class="footer__content">
+            <div>
+                <nav class="footer__navbar">
+                    <ul class="footer__navbar__block">
+                        <li class="footer__navbar__list"><a href="#" class="footer__navbar__text">Home</a></li>
+                        <li class="footer__navbar__list"><a href="#" class="footer__navbar__text">Photos</a></li>
+                        <li class="footer__navbar__list"><a href="#" class="footer__navbar__text">About</a></li>
+                        <li class="footer__navbar__list"><a href="#" class="footer__navbar__text">Sign in</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__content__info">
+                <address class="footer__content__info__address">Silicone Valley, San Jose, 5</address>
+                <span class="footer__content__info__number">+1111-000-111</span>
+            </div>
+        </div>
+        <div class="footer__socsites">
+            <a href="https://www.facebook.com/liana.bagiyan.9" target="_blank" class="footer__socsites__icon"><i class="fa fa-facebook footer__socsites__fbicon" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/_sweetli__/" target="_blank" class="footer__socsites__icon"><i class="fa fa-instagram footer__socsites__insticon" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/liana-baghiyan-226447158/" target="_blank" class="footer__socsites__icon"><i class="fa fa-linkedin footer__socsites__inicon" aria-hidden="true"></i></a>
+        </div>
+        <h2 class="footer__copyright">Copyright © 2020 Dance Inc. All rights reserved.</h2>
+        <a href="https://www.facebook.com/liana.bagiyan.9" class="footer__author">Liana Baghiyan</a>
+    </footer>
+</body>
+</html>
