@@ -1,4 +1,4 @@
-# Welcome my GitHub page!
+# Welcome my GitHub account!
 
 #### I started to learn JavaScript language. Its so interesting.
 
