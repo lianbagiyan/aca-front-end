@@ -1,8 +1,8 @@
 /**
     * Given an array of numbers. Write a recursive function to find its minimal positive
     element.
-    * @param {arr} array - The array value.
-    * @param {min} number - The minimum value of array.
+    * @param {array} arr - The array value.
+    * @param {number} min - The minimum value of array.
 */
 
 function smallest(arr) {
