@@ -1,6 +1,7 @@
 /**
     * Write a recursive function to determine whether all digits of the number are odd or not.
     * @param {number} number - The n value.
+    * @returns {boolean} - true, if all symboll of number is odd
 */
 const oddElemNumbers = (number) => {
     if (number === 0) {

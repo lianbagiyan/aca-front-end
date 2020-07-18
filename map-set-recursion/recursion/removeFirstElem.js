@@ -1,7 +1,8 @@
 /**
  * Write a recursive function that removes the first element and returns the given array. 
- * @param {arr} array - the array
- * @param {stop} number - loop count
+ * @param {array} arr - the array
+ * @param {number} stop - loop count
+ * @returns {array} - array without first element
 */
 
 const removeFirstElem = (arr) => {
@@ -20,7 +21,7 @@ const removeFirstElem = (arr) => {
     return iter(arr);
 };
   
-console.log(removeFirstElem([6, 78, "n", 0, 1])); //[78, ‘n’, 0, 1]
+console.log(removeFirstElem([6, 78, "n", 0, 1])); //[78, 'n', 0, 1]
 console.log(removeFirstElem([5])); //[]
 console.log(removeFirstElem([])); //[]
 console.log(removeFirstElem([4, 7, 8, 9, 0, 1])); //[7,8,9,0,1]

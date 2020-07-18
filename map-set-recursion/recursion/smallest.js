@@ -3,6 +3,7 @@
     element.
     * @param {array} arr - The array value.
     * @param {number} min - The minimum value of array.
+    * @returns {number} - smallest number of array
 */
 
 function smallest(arr) {

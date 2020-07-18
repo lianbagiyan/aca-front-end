@@ -1,6 +1,7 @@
 /**
     * Find the index where sorting order is violated.
     * @param {array} arr - The array value.
+    * @returns {number} - index of sorting array elememnt
 */
 
 const findIndex = (arr) => {
