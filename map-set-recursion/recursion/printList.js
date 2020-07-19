@@ -1,3 +1,10 @@
+/**
+ * Recursion - get list values
+ * @param {object}  tree- object
+ * @param {array} res - array, where we add values
+ * @returns {array} - array with object values
+*/
+
 let list = {
     value: 1,
     next: {
