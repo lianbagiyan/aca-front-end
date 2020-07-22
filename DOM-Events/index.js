@@ -1,3 +1,7 @@
+/**
+ * Images clicks
+*/
+
 let photos = new Array(
     "./assets/emoji/lian-hi.PNG",
     "./assets/emoji/lian-cool.PNG", 
@@ -27,5 +31,20 @@ function arrowBack() {
         i--
     }
     image.src = photos[i]
+}
+
+/**
+ * Button click for DateTime
+*/
+
+let dateTimeText = document.getElementById("answer-text");
+
+function displayDate() {
+    if(dateTimeText.style.display !== "block"){
+        dateTimeText.style.display = "block"
+        dateTimeText.innerText = Date();
+    }else{
+        dateTimeText.style.display = "none"
+    }
 }
 
