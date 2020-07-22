@@ -29,6 +29,10 @@
     align-items: center;
 }
 
+.code-section {
+    height: 365px;
+}
+
 .arrow {
     color: white;
     font-size: 30px;
