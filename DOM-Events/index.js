@@ -13,6 +13,7 @@ let photos = new Array(
 );
 
 let idNames = new Array(
+    "block-1",
     "block-2",
     "block-3",
     "block-4",
@@ -23,13 +24,16 @@ let idNames = new Array(
   
 let i = 0;
 let j = photos.length;
+let last = idNames.length;
 const image = document.getElementById("image");
 const rightArrow = document.getElementById("right");
 const leftArrow = document.getElementById("left");
 let contentBlock = document.querySelector("#block-1");
+let showBlock = document.getElementById(`${idNames[last-1]}`);
 
 rightArrow.addEventListener('click', () => {
-    let nextBlock = document.getElementById(`${idNames[i]}`);
+    
+    let nextBlock = document.getElementById(`${idNames[i+1]}`);
 
     if (i >= 0) {
         document.getElementById("arrow-left").style.overflow = "visible";
@@ -47,9 +51,9 @@ rightArrow.addEventListener('click', () => {
     nextBlock.style.display = 'flex';
     contentBlock = nextBlock;
 })
-  
+
 leftArrow.addEventListener('click', () => {
-    let prevBlock = document.getElementById(`${idNames[0]}`);
+    let prevBlock = document.getElementById(`${idNames[i-1]}`);
 
     if (i === 1) {
         document.getElementById("arrow-left").style.overflow = "hidden";
@@ -60,12 +64,13 @@ leftArrow.addEventListener('click', () => {
     }
     if (i != 0) {
         i--;
+        console.log(i)
     }
     image.src = photos[i];
     
-    contentBlock.style.display = 'none';
-    nextBlock.style.display = 'flex';
-    contentBlock = nextBlock;
+    showBlock.style.display = 'none';
+    prevBlock.style.display = 'flex';
+    showBlock = prevBlock;
 })
   
 /**
@@ -129,13 +134,13 @@ const render = (state) => {
    * Sign-in form
 */
 const submitBtnForm = document.getElementById("submit-btn");
-const userName = document.getElementsByName("uname");
-const pass = document.getElementsByName("psw");
+const firstName = document.getElementsByName("firstName");
+const lastName = document.getElementsByName("lastName");
 const outputText = {}
 
 submitBtnForm.addEventListener('click', () => {
     let outputText = document.createElement('h2');
-    outputText.innerText = userName.innerText;
+    outputText.innerText = firstName.innerText;
     alert(JSON.stringify(outputText));
 })
 
