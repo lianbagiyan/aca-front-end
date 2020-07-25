@@ -8,45 +8,65 @@ let photos = new Array(
     "./assets/emoji/lian-hmm.PNG",
     "./assets/emoji/lian-query.PNG",
     "./assets/emoji/lian-smile.PNG",
-    "./assets/emoji/lian-yes.PNG"
+    "./assets/emoji/lian-yes.PNG",
+    "./assets/emoji/lian-happy-face.PNG"
 );
 
-let idName = new Array(
-    "block-2"
-)
+let idNames = new Array(
+    "block-2",
+    "block-3",
+    "block-4",
+    "block-5",
+    "block-6",
+    "block-7"
+);
   
 let i = 0;
 let j = photos.length;
-let image = document.getElementById("image");
-  
-function arrowForward() {
+const image = document.getElementById("image");
+const rightArrow = document.getElementById("right");
+const leftArrow = document.getElementById("left");
+let contentBlock = document.querySelector("#block-1");
+
+rightArrow.addEventListener('click', () => {
+    let nextBlock = document.getElementById(`${idNames[i]}`);
+
     if (i >= 0) {
-      document.getElementById("arrow-left").style.overflow = "visible";
+        document.getElementById("arrow-left").style.overflow = "visible";
     }
-  
+    
     if (i === j - 2) {
-      document.getElementById("arrow-right").style.overflow = "hidden";
+        document.getElementById("arrow-right").style.overflow = "hidden";
     }
-  
+    
     if (i != j - 1) {
-      i++;
+        i++;
     }
     image.src = photos[i];
-}
+    contentBlock.style.display = 'none';
+    nextBlock.style.display = 'flex';
+    contentBlock = nextBlock;
+})
   
-function arrowBack() {
+leftArrow.addEventListener('click', () => {
+    let prevBlock = document.getElementById(`${idNames[0]}`);
+
     if (i === 1) {
-      document.getElementById("arrow-left").style.overflow = "hidden";
+        document.getElementById("arrow-left").style.overflow = "hidden";
     }
-  
+    
     if (i === j - 1) {
-      document.getElementById("arrow-right").style.overflow = "visible";
+        document.getElementById("arrow-right").style.overflow = "visible";
     }
     if (i != 0) {
-      i--;
+        i--;
     }
     image.src = photos[i];
-}
+    
+    contentBlock.style.display = 'none';
+    nextBlock.style.display = 'flex';
+    contentBlock = nextBlock;
+})
   
 /**
     * Button click for DateTime
@@ -105,6 +125,19 @@ const render = (state) => {
     inputBody.append(list);
 };
   
+/**
+   * Sign-in form
+*/
+const submitBtnForm = document.getElementById("submit-btn");
+const userName = document.getElementsByName("uname");
+const pass = document.getElementsByName("psw");
+const outputText = {}
+
+submitBtnForm.addEventListener('click', () => {
+    let outputText = document.createElement('h2');
+    outputText.innerText = userName.innerText;
+    alert(JSON.stringify(outputText));
+})
 
 /**
    * Schedule information list
@@ -115,4 +148,50 @@ const listText = document.querySelector(".item-text");
 
 listText.addEventListener('click', () => {
     listText.style.textDecoration = "underline";
+})
+
+/**
+   * Slider
+*/
+
+document.getElementById("slider-left").onclick = sliderLeft;
+autoSlider();
+let left = 0;
+var timer;
+
+function sliderLeft() {
+    const sliderBlock = document.getElementById("slider-block");
+    left-=100;
+    if(left < -300) {
+        left = 0;
+        clearTimeout(timer);
+    }
+    sliderBlock.style.left = left+"px";
+    autoSlider();
+}
+
+function autoSlider () {
+    timer = setTimeout(sliderLeft, 2000);
+}
+
+/**
+   * Text color
+*/
+
+const quoteText = document.querySelector(".quote-text")
+const inputTextColor = document.querySelector(".text-color-input");
+const inputBgColor = document.querySelector(".bg-color-input");
+const applyBtn = document.querySelector(".apply-btn");
+
+applyBtn.addEventListener('click', () => {
+    let hex = '#';
+    let textColorValue = inputTextColor.value;
+    let bgColorValue = inputBgColor.value;
+
+    if(textColorValue[0] === hex && textColorValue.length === 7 && bgColorValue[0] === hex && bgColorValue.length === 7){
+        quoteText.style.color = inputTextColor.value;
+        quoteText.style.backgroundColor = inputBgColor.value;
+    } else{
+        alert("Oops...! You need to write hexadecimal values.")
+    }
 })

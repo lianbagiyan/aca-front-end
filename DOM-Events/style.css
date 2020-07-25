@@ -52,6 +52,7 @@
     letter-spacing: 5px;
     font-family: monospace;
     color: #8c8080;
+    text-align: center;
 }
 
 .button {
@@ -167,6 +168,42 @@
     cursor: pointer;
 }
 
-#block-1, #block-2, #block-3, #block-4 {
+#slider {
+    width: 400px;
+    height: 100px;
+    border: 7px solid gray;
+    overflow: hidden;
+}
+
+#slider-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.quote-text {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 16px;
+    font-family: cursive;
+}
+
+.input-color {
+    margin: 10px;
+    padding: 5px;
+}
+
+.apply-btn {
+    padding: 5px 20px;
+    font-size: 16px;
+    letter-spacing: 5px;
+    background-color: #d8813c91;
+    border: 1px solid #5d4917;
+}
+
+#block-2, #block-3, #block-4, #block-5, #block-6, #block-7 {
     display: none;
 }
