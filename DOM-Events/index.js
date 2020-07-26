@@ -64,7 +64,6 @@ leftArrow.addEventListener('click', () => {
     }
     if (i != 0) {
         i--;
-        console.log(i)
     }
     image.src = photos[i];
     
@@ -77,17 +76,17 @@ leftArrow.addEventListener('click', () => {
     * Button click for DateTime
 */
   
-  let dateTimeText = document.getElementById("answer-text");
-  document.getElementById("btn").addEventListener("click", displayDate);
+let dateTimeText = document.getElementById("answer-text");
+document.getElementById("btn").addEventListener("click", displayDate);
   
-  function displayDate() {
-      if(dateTimeText.style.display !== "block"){
+function displayDate() {
+    if(dateTimeText.style.display !== "block"){
           dateTimeText.style.display = "block"
           dateTimeText.innerText = Date();
       }else{
           dateTimeText.style.display = "none"
       }
-  }
+}
   
 /**
    * Form --- input
@@ -136,11 +135,12 @@ const render = (state) => {
 const submitBtnForm = document.getElementById("submit-btn");
 const firstName = document.getElementsByName("firstName");
 const lastName = document.getElementsByName("lastName");
-const outputText = {}
-
+const outputText = {
+    fName: firstName.value,
+    lName: lastName.value
+};
+console.log(firstName.value)
 submitBtnForm.addEventListener('click', () => {
-    let outputText = document.createElement('h2');
-    outputText.innerText = firstName.innerText;
     alert(JSON.stringify(outputText));
 })
 
@@ -148,11 +148,14 @@ submitBtnForm.addEventListener('click', () => {
    * Schedule information list
 */
 
-const listItem = document.querySelectorAll(".item");
+const listItemElem = document.querySelectorAll(".item");
 const listText = document.querySelector(".item-text");
 
-listText.addEventListener('click', () => {
+listItemElem.addEventListener('click', () => {
+    console.log(listItem, listText)
     listText.style.textDecoration = "underline";
+    listItemElem.style.backgroundColor = "#eadfdf";
+    
 })
 
 /**
