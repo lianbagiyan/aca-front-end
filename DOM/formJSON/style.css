@@ -1,0 +1,38 @@
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 40px 0;
+}
+
+.form__block {
+    width: 300px;
+}
+
+.form__container__input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form__container__btn {
+    background-color: #614a5f;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form__container__btn:hover {
+    opacity: 0.8;
+}
+
+.form__container {
+    padding: 16px;
+}
