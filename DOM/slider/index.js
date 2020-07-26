@@ -1,19 +1,31 @@
+document.getElementById("slider-right").onclick = sliderRight;
 document.getElementById("slider-left").onclick = sliderLeft;
-autoSlider();
-let left = 0;
+const sliderBlock = document.getElementById("slider-block");
+
+let position = 0;
 var timer;
 
-function sliderLeft() {
-  const sliderBlock = document.getElementById("slider-block");
-  left -= 100;
-  if (left < -300) {
-    left = 0;
-    clearTimeout(timer);
+function sliderRight() {
+  clearTimeout(timer);
+  position -= 100;
+  if (position < -300) {
+    position = 0;
   }
-  sliderBlock.style.left = left + "px";
+  sliderBlock.style.left = position + "px";
   autoSlider();
 }
 
-function autoSlider() {
-  timer = setTimeout(sliderLeft, 2000);
+function sliderLeft() {
+  clearTimeout(timer);
+  position += 100;
+  if (position < 300) {
+    position = 0;
+  }
+  sliderBlock.style.left = position + "px";
 }
+
+function autoSlider() {
+  timer = setTimeout(sliderRight, 3000);
+}
+
+autoSlider();
