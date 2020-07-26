@@ -8,3 +8,8 @@
     margin: 10px;
     cursor: pointer;
 }
+
+.code-body {
+    max-height: 330px;
+    overflow-y: scroll;
+}
