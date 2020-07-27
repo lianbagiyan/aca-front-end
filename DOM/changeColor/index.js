@@ -20,3 +20,4 @@ applyBtn.addEventListener("click", () => {
     alert("Oops...! You need to write hexadecimal values such as cdcd67...!");
   }
 });
+
