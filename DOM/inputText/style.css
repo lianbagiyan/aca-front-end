@@ -13,3 +13,47 @@
     max-height: 330px;
     overflow-y: scroll;
 }
+ 
+li {
+    cursor: pointer;
+    position: relative;
+    list-style-type: none;
+}
+  
+.header {
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #ce6773;
+    height: 55px;
+    align-items: center;
+}
+
+#myInput {
+    padding: 7px;
+    border: none;
+    outline: none;
+}
+
+.addBtn {
+    padding: 5px 30px;
+    background-color: gray;
+    letter-spacing: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.addBtn:hover {
+    box-shadow: 10px 2px 16px #403c3c;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+  

@@ -1,11 +1,17 @@
 const submitBtnForm = document.getElementById("submit-btn");
 const firstName = document.getElementsByName("firstName");
 const lastName = document.getElementsByName("lastName");
-const outputText = {
-  fName: firstName.value,
-  lName: lastName.value,
+const form = document.getElementsByClassName("form-body");
+const output = {
+  firstName,
+  lastName
 };
-console.log(firstName.value);
+
 submitBtnForm.addEventListener("click", () => {
-  alert(JSON.stringify(outputText));
+  output[firstName] = firstName.value;
+  output[lastName] = lastName.value;
+  let json = JSON.stringify(output)
+  alert(json);
 });
+
+console.log(output)

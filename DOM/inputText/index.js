@@ -1,36 +1,14 @@
-const inputText = document.querySelector(".input");
-const inputBody = document.querySelector(".input-body");
-const submitBtn = document.querySelector(".button-form");
+function newElement() {
+  const li = document.createElement("li");
+  const inputValue = document.getElementById("myInput").value;
+  const input = document.getElementById("myInput");
+  let text = document.createTextNode(inputValue);
+  li.appendChild(text);
+  if (inputValue === '') {
+    alert("Oops...! Write something!");
+  } else {
+    document.getElementById("input-body").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+}
 
-const state = {
-  inputValue: "",
-  todos: [],
-};
-
-inputText.addEventListener("input", (event) => {
-  state.inputValue = event.target.value;
-});
-
-submitBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  state.todos.push(state.inputValue);
-  state.inputValue = "";
-  inputText.value = "";
-
-  render(state);
-});
-
-const render = (state) => {
-  inputText.value = state.inputValue;
-
-  const list = document.createElement("ol");
-
-  state.todos.forEach((value) => {
-    const listItem = document.createElement("li");
-    listItem.innerText = value;
-    list.append(listItem);
-  });
-
-  inputBody.innerText = "";
-  inputBody.append(list);
-};
