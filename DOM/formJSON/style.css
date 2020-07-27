@@ -6,11 +6,11 @@
     padding: 100px 0 40px 0;
 }
 
-.form__block {
-    width: 300px;
+.form-body {
+    width: 350px;
 }
 
-.form__container__input {
+.form-input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -19,7 +19,7 @@
     box-sizing: border-box;
 }
 
-.form__container__btn {
+.form-btn {
     background-color: #614a5f;
     color: white;
     padding: 14px 20px;
@@ -29,10 +29,10 @@
     width: 100%;
 }
 
-.form__container__btn:hover {
+.form-btn:hover {
     opacity: 0.8;
 }
 
-.form__container {
+.form-container {
     padding: 16px;
 }
