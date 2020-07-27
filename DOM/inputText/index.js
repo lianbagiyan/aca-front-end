@@ -1,14 +1,25 @@
+const output = document.getElementById("output");
+const input = document.getElementById("myInput");
+
 function newElement() {
   const li = document.createElement("li");
-  const inputValue = document.getElementById("myInput").value;
-  const input = document.getElementById("myInput");
+  const inputValue = input.value;
+
   let text = document.createTextNode(inputValue);
   li.appendChild(text);
-  if (inputValue === '') {
+  if (inputValue === "") {
     alert("Oops...! Write something!");
   } else {
-    document.getElementById("input-body").appendChild(li);
+    output.appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  input.value = "";
 }
+
+input.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    newElement();
+  }
+});
+
+
 
