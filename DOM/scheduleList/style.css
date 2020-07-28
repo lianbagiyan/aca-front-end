@@ -1,0 +1,13 @@
+.item {
+    margin: 5px;
+    padding: 5px;
+    background-color: #bbb3b3
+}
+
+.item:hover {
+    background-color: #eadfdf;
+    color: #615858;
+    font-size: 18px;
+    cursor: pointer;
+}
+  

@@ -1,0 +1,33 @@
+#slider {
+    width: 400px;
+    height: 100px;
+    border: 7px solid gray;
+    overflow: hidden;
+}
+
+#slider-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.button-block {
+    width: 400px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button {
+    width: 70px;
+    padding: 5px;
+    background-color: #ea997f;
+    border: none;
+    color: white;
+    letter-spacing: 4px;
+    border-radius: 5px;
+}

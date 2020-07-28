@@ -1,0 +1,18 @@
+.button {
+    background-color: #4f9e92;
+    border: none;
+    padding: 17px;
+    color: #fffffff2;
+    font-size: large;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25px;
+}
