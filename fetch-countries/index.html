@@ -6,12 +6,23 @@
     <meta name="keywords" content="javascript, fetch, countries">
     <meta name="author" content="Liana Baghiyan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>Fetch</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="../main.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-    <script src="./index.js"></script>
-</body>
+    <input id="country-input" type="text" placeholder="Search" />
+    <hr />
+    <h1>Countries:</h1>
+    <div class="countries-body">
+      <table class="country-table">
+        <thead style="font-weight: bold;">
+          <td>Country</td>
+          <td>Flag</td>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
