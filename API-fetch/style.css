@@ -1,3 +1,36 @@
-h1{
-    color: green;
+.content {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    border: 1px solid #e4dcdc;
+    box-shadow: 7px -4px 17px #c3baba;
+}
+
+.title {
+    text-align: center;
+    color: indianred;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    width: 100px;
 }
