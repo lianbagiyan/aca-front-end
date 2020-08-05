@@ -1,4 +1,5 @@
-let img = document.getElementsByClassName('.photo-dog');
+let img = document.querySelector('.photo-dog');
+console.log('img:', img)
 let breed = document.querySelector('.select-block');
 
 function addImages(breed) {
@@ -9,6 +10,7 @@ function addImages(breed) {
         
             img.src = r.message
             console.log('src', img.src)
+            console.log(img)
         })
 }
 
