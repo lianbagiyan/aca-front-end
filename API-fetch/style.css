@@ -1,5 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eae2d6;
+}
+
 .content {
-    width: 800px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -7,8 +15,10 @@
 }
 
 .card {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 550px;
+    margin: 25px 0;
+    background-color: #e6ebec;
     border: 1px solid #e4dcdc;
     box-shadow: 7px -4px 17px #c3baba;
 }
@@ -16,6 +26,7 @@
 .title {
     text-align: center;
     color: indianred;
+    letter-spacing: 10px;
 }
 
 .card-body {
@@ -29,8 +40,29 @@
 .item {
     display: flex;
     flex-direction: row;
+    padding: 8px 0;
 }
 
 .text {
     width: 100px;
+    font-weight: bold;
+}
+
+.card-title {
+    letter-spacing: 4px;
+    font-family: cursive;
+    color: #7c767f;
+    text-shadow: 2px -1px 10px #a7b4bf;
+}
+
+.value {
+    font-family: monospace;
+    width: 250px;
+    text-align: inherit;
+    color: #484343;
+    font-size: 12px;
+}
+
+.line {
+    width: 95%;
 }
