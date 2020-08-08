@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 1000px;
+    padding: 0 100px 100px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(216, 165, 165);
+}
+
+.select-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.select-block {
+    border: none;
+    width: 250px;
+    height: 50px;
+    color: #928787;
+    font-size: 16px;
+    font-family: auto;
+    letter-spacing: 4px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.photo-box {
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: white;
+    letter-spacing: 4px;
+    font-size: 25px;
+    padding: 7px 0 23px 0;
+}
+
+.photo-dog {
+    height: 450px;
+    object-fit: contain;
+}
