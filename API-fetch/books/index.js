@@ -2,6 +2,8 @@ let input = document.querySelector('.search-input');
 let search = document.querySelector('.search-icon');
 let contentBody = document.querySelector('.content-body');
 
+let baseUrl = `http://openlibrary.org/search.json?q=`;
+
 let state = {
     currentPage: 1,
     inputValue: "",
@@ -14,7 +16,7 @@ function getValue(){
     let inputValue = input.value;
     console.log(inputValue);
 
-    let url = `http://openlibrary.org/search.json?q=${inputValue}`;
+    let url = `${baseUrl}${inputValue}`;
 
     fetch(url)
     .then(r => r.json())
@@ -22,9 +24,10 @@ function getValue(){
         console.log(r)
 
         let pageCounter = Math.ceil(r.num_found/100); 
-        // if(pageCounter > 12) {
+        if(pageCounter > 12) {
+            getPageContainer();
+        }
 
-        // }
         createEveryPage(pageCounter);
 
         r.docs.forEach(({title_suggest, author_name, first_publish_year, subject}) => {
@@ -37,6 +40,10 @@ function getValue(){
             contentBody.append(newList);
         });
     })
+}
+
+function getPageContainer() {
+
 }
 
 function createEveryPage(number){ 
