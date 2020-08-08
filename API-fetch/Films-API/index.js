@@ -1,7 +1,6 @@
 let card = document.querySelector(".card");
 let content = document.querySelector(".content");
 
-
 function createCard() {
   let newCard = document.createElement("div");
   newCard.className = "card";
