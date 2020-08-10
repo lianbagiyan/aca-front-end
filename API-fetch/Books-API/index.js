@@ -1,3 +1,5 @@
+import { doGet } from './fetch.helper.js'; 
+
 let input = document.querySelector('.search-input');
 let search = document.querySelector('.search-icon');
 let contentBody = document.querySelector('.content-body');
@@ -11,27 +13,16 @@ const state = {
     booksPart: [],
 };
 
+
+
 function getValue(){
     document.body.style.justifyContent = 'start';
     let inputValue = input.value;
     console.log(inputValue);
 
-    let url;
-
-    if(state.currentPage === 1) {
-        url =  `${baseUrl}${inputValue}`;
-    } else {
-        url =  `${baseUrl}${inputValue}&page=${state.currentPage}`
-    }
-
     contentBody.innerHTML = '';
 
-    fetch(url)
-    .then(r => r.json())
-    .then((r) => {
-        console.log(r)
-
-        let pageCounter = Math.ceil(r.num_found/100); 
+    let pageCounter = Math.ceil(r.num_found/100); 
         // if(pageCounter > 12) {
         //     getPageContainer();
         // }
@@ -47,7 +38,6 @@ function getValue(){
             let newList = createBox([title, authorName, year, subjects]);
             contentBody.append(newList);
         });
-    })
 }
 
 function createEveryPage(number){ 
