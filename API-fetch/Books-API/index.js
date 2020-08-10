@@ -2,9 +2,9 @@ let input = document.querySelector('.search-input');
 let search = document.querySelector('.search-icon');
 let contentBody = document.querySelector('.content-body');
 
-let baseUrl = `http://openlibrary.org/search.json?q=`;
+const baseUrl = `http://openlibrary.org/search.json?q=`;
 
-let state = {
+const state = {
     currentPage: 1,
     inputValue: "",
     urlPage: "",
@@ -16,7 +16,15 @@ function getValue(){
     let inputValue = input.value;
     console.log(inputValue);
 
-    let url = `${baseUrl}${inputValue}`;
+    let url;
+
+    if(state.currentPage === 1) {
+        url =  `${baseUrl}${inputValue}`;
+    } else {
+        url =  `${baseUrl}${inputValue}&page=${state.currentPage}`
+    }
+
+    contentBody.innerHTML = '';
 
     fetch(url)
     .then(r => r.json())
@@ -24,9 +32,9 @@ function getValue(){
         console.log(r)
 
         let pageCounter = Math.ceil(r.num_found/100); 
-        if(pageCounter > 12) {
-            getPageContainer();
-        }
+        // if(pageCounter > 12) {
+        //     getPageContainer();
+        // }
 
         createEveryPage(pageCounter);
 
@@ -40,10 +48,6 @@ function getValue(){
             contentBody.append(newList);
         });
     })
-}
-
-function getPageContainer() {
-
 }
 
 function createEveryPage(number){ 
@@ -80,3 +84,16 @@ input.addEventListener("keypress", (event) => {
     }
 });
 
+contentBody.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    let pageNumber = document.querySelector('.page-count');
+    if(event.target.classList.contains('page-number')){
+        state.currentPage = event.target.text;
+        console.log(state.currentPage)
+    }
+
+    contentBody.innerText = '';
+
+    getValue();
+})
