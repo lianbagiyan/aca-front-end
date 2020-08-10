@@ -1,24 +1,8 @@
-//import { doGet } from './fetch.helper.js';
+import { doGet } from './fetch.helper.js';
 
 let input = document.querySelector(".search-input");
-let search = document.querySelector(".search-icon");
 let contentBody = document.querySelector(".content-body");
-
-const baseUrl = `http://openlibrary.org/search.json?q=`;
-
-async function doGet(value, currentPage) {
-  console.log("value", value, "currentPage", currentPage);
-  let response;
-
-  if (currentPage) {
-    response = await fetch(`${baseUrl}${value}`);
-  } else {
-    response = await fetch(`${baseUrl}${value}&page=${currentPage}`);
-  }
-
-  let json = await response.json();
-  return json;
-}
+let pagination = document.querySelector(".page-count");
 
 const state = {
   currentPage: 1,
@@ -28,14 +12,16 @@ const state = {
 
 async function getValue() {
   document.body.style.justifyContent = "start";
-  contentBody.innerText = "Wait, please! Page is running ...";
-
+  contentBody.innerText = "Wait, please! Count to 5 :)";
+  setTimeout(() => {
+    contentBody.innerText = "Page is running ...";
+  }, 3000)
+    pagination.innerText = '';
   state.booksPart = [];
 
   let data = await doGet(state.inputValue, state.currentPage);
-
+    state.numFound = await data.num_found;
   state.pageCounter = Math.ceil(data.num_found / 100);
-  console.log(state.pageCounter);
 
   createEveryPage(state.pageCounter);
 
@@ -43,24 +29,21 @@ async function getValue() {
     ({ title_suggest, author_name, first_publish_year, subject }) => {
       let container = {};
       container.title = title_suggest;
-      container.authorName = author_name ? author_name[0] : "undefined";
+      container.authorName = author_name ? author_name[0] : "Oops! Empty value ...";
       container.year = first_publish_year;
-      container.subjects = subject ? subject.slice(0, 5) : "undefined";
+      container.subjects = subject ? subject.slice(0, 5) : "Oops! Empty value ...";
       state.booksPart.push(container);
-      console.log("containers", state.booksPart);
-
-      state.booksPart.forEach((item) => {
-        console.log("item", item);
-        createBox(item);
-      });
     }
   );
+
+  state.booksPart.forEach((item) => {
+    createBox(item);
+  });
 }
+
 
 function createEveryPage(number) {
   contentBody.innerText = "";
-  let pagination = document.createElement("div");
-  pagination.className = "page-count";
 
   for (let i = 1; i <= number; i++) {
     let paginationItem = document.createElement("a");
@@ -95,15 +78,10 @@ input.addEventListener("keypress", (event) => {
 });
 
 pagination.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  if (event.target.classList.contains("page-count")) {
-    console.log("event.target.text", event.target.text);
+    event.preventDefault();
+  if (event.target.classList.contains("page-number")) {
     state.currentPage = event.target.text;
-    console.log(state.currentPage);
+    getValue();
   }
 
-  contentBody.innerText = "";
-
-  getValue();
 });

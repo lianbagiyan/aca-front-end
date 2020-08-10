@@ -6,12 +6,17 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: #9487873b
 }
 
 .head-text {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.content-body {
+    width: 1000px;
 }
 
 .book-icon {
