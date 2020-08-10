@@ -1,89 +1,109 @@
-import { doGet } from './fetch.helper.js'; 
+//import { doGet } from './fetch.helper.js';
 
-let input = document.querySelector('.search-input');
-let search = document.querySelector('.search-icon');
-let contentBody = document.querySelector('.content-body');
+let input = document.querySelector(".search-input");
+let search = document.querySelector(".search-icon");
+let contentBody = document.querySelector(".content-body");
 
 const baseUrl = `http://openlibrary.org/search.json?q=`;
 
+async function doGet(value, currentPage) {
+  console.log("value", value, "currentPage", currentPage);
+  let response;
+
+  if (currentPage) {
+    response = await fetch(`${baseUrl}${value}`);
+  } else {
+    response = await fetch(`${baseUrl}${value}&page=${currentPage}`);
+  }
+
+  let json = await response.json();
+  return json;
+}
+
 const state = {
-    currentPage: 1,
-    inputValue: "",
-    urlPage: "",
-    booksPart: [],
+  currentPage: 1,
+  inputValue: "",
+  booksPart: [],
 };
 
+async function getValue() {
+  document.body.style.justifyContent = "start";
+  contentBody.innerText = "Wait, please! Page is running ...";
 
+  state.booksPart = [];
 
-function getValue(){
-    document.body.style.justifyContent = 'start';
-    let inputValue = input.value;
-    console.log(inputValue);
+  let data = await doGet(state.inputValue, state.currentPage);
 
-    contentBody.innerHTML = '';
+  state.pageCounter = Math.ceil(data.num_found / 100);
+  console.log(state.pageCounter);
 
-    let pageCounter = Math.ceil(r.num_found/100); 
-        // if(pageCounter > 12) {
-        //     getPageContainer();
-        // }
+  createEveryPage(state.pageCounter);
 
-        createEveryPage(pageCounter);
+  data.docs.forEach(
+    ({ title_suggest, author_name, first_publish_year, subject }) => {
+      let container = {};
+      container.title = title_suggest;
+      container.authorName = author_name ? author_name[0] : "undefined";
+      container.year = first_publish_year;
+      container.subjects = subject ? subject.slice(0, 5) : "undefined";
+      state.booksPart.push(container);
+      console.log("containers", state.booksPart);
 
-        r.docs.forEach(({title_suggest, author_name, first_publish_year, subject}) => {
-            let title = title_suggest;
-            let authorName = author_name ? author_name[0] : "undefined";
-            let year = first_publish_year;
-            let subjects = subject ? subject.slice(0, 5) : "undefined";
-
-            let newList = createBox([title, authorName, year, subjects]);
-            contentBody.append(newList);
-        });
-}
-
-function createEveryPage(number){ 
-    contentBody.innerText = '';
-    let pageNumbersList = document.createElement('div');
-    pageNumbersList.className = 'page-count';
-
-    for(let i=1; i<=number; i++){
-        let pageNumbersItem = document.createElement('a');
-        pageNumbersItem.className = "page-number";
-        pageNumbersItem.innerText = i;
-        pageNumbersList.append(pageNumbersItem);
+      state.booksPart.forEach((item) => {
+        console.log("item", item);
+        createBox(item);
+      });
     }
-
-    contentBody.append(pageNumbersList);
+  );
 }
 
-function createBox(value){
-    let ul = document.createElement('ul');
-    ul.className = "book-content";
-    
-    value.forEach((value) => {
-        let li = document.createElement("li");
-        li.innerText = value;
-        li.className = "book-content-item";
-        ul.append(li);
-    })
-    return ul;
+function createEveryPage(number) {
+  contentBody.innerText = "";
+  let pagination = document.createElement("div");
+  pagination.className = "page-count";
+
+  for (let i = 1; i <= number; i++) {
+    let paginationItem = document.createElement("a");
+    paginationItem.className = "page-number";
+    paginationItem.innerText = i;
+    pagination.append(paginationItem);
+  }
+
+  contentBody.append(pagination);
+}
+
+function createBox(value) {
+  let ul = document.createElement("ul");
+  ul.className = "book-content";
+
+  for (let elem of Object.values(value)) {
+    let li = document.createElement("li");
+    li.innerText = elem;
+    li.className = "book-content-item";
+    ul.append(li);
+    contentBody.append(ul);
+  }
+  return ul;
 }
 
 input.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-      getValue();
-    }
+  if (event.key === "Enter") {
+    state.inputValue = input.value;
+    getValue();
+    input.value = "";
+  }
 });
 
-contentBody.addEventListener('click', (event) => {
-    event.preventDefault();
+pagination.addEventListener("click", (event) => {
+  event.preventDefault();
 
-    let pageNumber = document.querySelector('.page-count');
-    if(event.target.classList.contains('page-number')){
-        state.currentPage = event.target.text;
-        console.log(state.currentPage)
-    }
+  if (event.target.classList.contains("page-count")) {
+    console.log("event.target.text", event.target.text);
+    state.currentPage = event.target.text;
+    console.log(state.currentPage);
+  }
 
-    contentBody.innerText = '';
+  contentBody.innerText = "";
 
-    getValue();
-})
+  getValue();
+});
