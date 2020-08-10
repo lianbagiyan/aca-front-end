@@ -10,6 +10,6 @@ export async function doGet(value, currentPage) {
   
     let json = await response.json();
     return json;
-  }
-
-  const baseUrl = `http://openlibrary.org/search.json?q=`;
+}
+  
+const baseUrl = `http://openlibrary.org/search.json?q=`;
