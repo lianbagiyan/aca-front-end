@@ -1,82 +1,87 @@
-let input = document.querySelector('.search-input');
-let search = document.querySelector('.search-icon');
-let contentBody = document.querySelector('.content-body');
+import { doGet } from './fetch.helper.js';
 
-let baseUrl = `http://openlibrary.org/search.json?q=`;
+let input = document.querySelector(".search-input");
+let contentBody = document.querySelector(".content-body");
+let pagination = document.querySelector(".page-count");
 
-let state = {
-    currentPage: 1,
-    inputValue: "",
-    urlPage: "",
-    booksPart: [],
+const state = {
+  currentPage: 1,
+  inputValue: "",
+  booksPart: [],
 };
 
-function getValue(){
-    document.body.style.justifyContent = 'start';
-    let inputValue = input.value;
-    console.log(inputValue);
+async function getValue() {
+  document.body.style.justifyContent = "start";
+  contentBody.innerText = "Wait, please! Count to 5 :)";
+  setTimeout(() => {
+    contentBody.innerText = "Page is running ...";
+  }, 3000)
+    pagination.innerText = '';
+  state.booksPart = [];
 
-    let url = `${baseUrl}${inputValue}`;
+  let data = await doGet(state.inputValue, state.currentPage);
+    state.numFound = await data.num_found;
+  state.pageCounter = Math.ceil(data.num_found / 100);
 
-    fetch(url)
-    .then(r => r.json())
-    .then((r) => {
-        console.log(r)
+  createEveryPage(state.pageCounter);
 
-        let pageCounter = Math.ceil(r.num_found/100); 
-        if(pageCounter > 12) {
-            getPageContainer();
-        }
-
-        createEveryPage(pageCounter);
-
-        r.docs.forEach(({title_suggest, author_name, first_publish_year, subject}) => {
-            let title = title_suggest;
-            let authorName = author_name ? author_name[0] : "undefined";
-            let year = first_publish_year;
-            let subjects = subject ? subject.slice(0, 5) : "undefined";
-
-            let newList = createBox([title, authorName, year, subjects]);
-            contentBody.append(newList);
-        });
-    })
-}
-
-function getPageContainer() {
-
-}
-
-function createEveryPage(number){ 
-    contentBody.innerText = '';
-    let pageNumbersList = document.createElement('div');
-    pageNumbersList.className = 'page-count';
-
-    for(let i=1; i<=number; i++){
-        let pageNumbersItem = document.createElement('a');
-        pageNumbersItem.className = "page-number";
-        pageNumbersItem.innerText = i;
-        pageNumbersList.append(pageNumbersItem);
+  data.docs.forEach(
+    ({ title_suggest, author_name, first_publish_year, subject }) => {
+      let container = {};
+      container.title = title_suggest;
+      container.authorName = author_name ? author_name[0] : "Oops! Empty value ...";
+      container.year = first_publish_year;
+      container.subjects = subject ? subject.slice(0, 5) : "Oops! Empty value ...";
+      state.booksPart.push(container);
     }
+  );
 
-    contentBody.append(pageNumbersList);
+  state.booksPart.forEach((item) => {
+    createBox(item);
+  });
 }
 
-function createBox(value){
-    let ul = document.createElement('ul');
-    ul.className = "book-content";
-    
-    value.forEach((value) => {
-        let li = document.createElement("li");
-        li.innerText = value;
-        li.className = "book-content-item";
-        ul.append(li);
-    })
-    return ul;
+
+function createEveryPage(number) {
+  contentBody.innerText = "";
+
+  for (let i = 1; i <= number; i++) {
+    let paginationItem = document.createElement("a");
+    paginationItem.className = "page-number";
+    paginationItem.innerText = i;
+    pagination.append(paginationItem);
+  }
+
+  contentBody.append(pagination);
+}
+
+function createBox(value) {
+  let ul = document.createElement("ul");
+  ul.className = "book-content";
+
+  for (let elem of Object.values(value)) {
+    let li = document.createElement("li");
+    li.innerText = elem;
+    li.className = "book-content-item";
+    ul.append(li);
+    contentBody.append(ul);
+  }
+  return ul;
 }
 
 input.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-      getValue();
-    }
+  if (event.key === "Enter") {
+    state.inputValue = input.value;
+    getValue();
+    input.value = "";
+  }
 });
 
+pagination.addEventListener("click", (event) => {
+    event.preventDefault();
+  if (event.target.classList.contains("page-number")) {
+    state.currentPage = event.target.text;
+    getValue();
+  }
+
+});
