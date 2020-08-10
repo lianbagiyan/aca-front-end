@@ -1,4 +1,4 @@
-import { doGet } from './fetch.helper.js';
+import { doGet } from "./fetch.helper.js";
 
 let input = document.querySelector(".search-input");
 let contentBody = document.querySelector(".content-body");
@@ -15,18 +15,17 @@ async function getValue() {
   contentBody.innerText = "Wait, please! Count to 5 :)";
   setTimeout(() => {
     contentBody.innerText = "Page is running ...";
-  }, 3000)
-    pagination.innerText = '';
+  }, 3000);
+  pagination.innerText = "";
   state.booksPart = [];
 
   let data = await doGet(state.inputValue, state.currentPage);
-    state.numFound = await data.num_found;
+  state.numFound = await data.num_found;
   state.pageCounter = Math.ceil(data.num_found / 100);
 
   createEveryPage(state.pageCounter);
 
-  data.docs.forEach(
-    ({ title_suggest, author_name, first_publish_year, subject }) => {
+  data.docs.forEach(({ title_suggest, author_name, first_publish_year, subject }) => {
       let container = {};
       container.title = title_suggest;
       container.authorName = author_name ? author_name[0] : "Oops! Empty value ...";
@@ -40,7 +39,6 @@ async function getValue() {
     createBox(item);
   });
 }
-
 
 function createEveryPage(number) {
   contentBody.innerText = "";
@@ -78,10 +76,9 @@ input.addEventListener("keypress", (event) => {
 });
 
 pagination.addEventListener("click", (event) => {
-    event.preventDefault();
+  event.preventDefault();
   if (event.target.classList.contains("page-number")) {
     state.currentPage = event.target.text;
     getValue();
   }
-
 });
