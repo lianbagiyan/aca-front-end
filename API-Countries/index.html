@@ -12,15 +12,33 @@
 </head>
 <body>
     <p class="title">Your time is limited, so don't waste it!</p>
-    <section class="form">
-        <form action="" class="form-container">
-            <input type="text" placeholder="Login" id="login">
     
-            <input type="password" placeholder="Password" id="pass">
-    
-            <button type="submit" class="btn">Submit</button>
+    <div class="container">
+        <form action="" class="form" id='form'>
+            <div class="form-control">
+                <label>Login</label>
+                <input type="text" placeholder="lianbagiyan" id="login">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message.</small>
+            </div>
+            <div class="form-control">
+                <label>Email</label>
+                <input type="email" placeholder="bagiyanliana2@gmail.com" id="email">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message.</small>
+            </div>
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password" placeholder="Password" id="password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message.</small>
+            </div>
+            <button class="btn">Sign In</button>
         </form>
-    </section>
+    </div>
     
     <script type="module" src="index.js"></script>
 </body>

@@ -1,5 +1,6 @@
 * {
     outline: 0 !important;
+    box-sizing: border-box;
 }
 
 body {
@@ -21,7 +22,83 @@ body {
     font-weight: 600;
 }
 
+.container {
+    width: 430px;
+    padding: 50px 20px;
+    background-color: #e2e4ec8f;
+    border-radius: 10px;
+}
+
+.form-control {
+    width: 85%;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control i {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
 .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 85%;
+    height: 35px;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 15px;
+    color: white;
+    background-color: #486982;
+}
+
+.btn:hover {
+    box-shadow: 2px -7px 27px #e6f0f1f5;
+}
+/* .form {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -33,7 +110,6 @@ body {
 .form-container {
     margin-right: 150px;
     width: 350px;
-    height: 170px;
     padding: 50px 0;
     display: flex;
     flex-direction: column;
@@ -44,7 +120,7 @@ body {
 }
 
 #login, #pass {
-    width: 70%;
+    width: 100%;
     height: 33px;
     padding-left: 20px;
     border: #ffdead;
@@ -54,13 +130,29 @@ body {
 
 .btn {
     margin-top: 25px;
-    width: 120px;
+    width: 150px;
     height: 35px;
     border: none;
     font-weight: bold;
     letter-spacing: 3px;
     border-radius: 15px;
     color: #524f4f;
+    background-color: #c6d9e7;
+}
+
+.btn:hover {
+    box-shadow: 2px -7px 27px #e6f0f1f5;
+}
+
+.login-box, .password-box {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.login-error {
+    color: white;
+    font-size: 12px;
+    padding-left: 10px;
 }
 
 @media screen and (max-width: 920px) {
@@ -91,4 +183,4 @@ body {
     .form-container {
         width: 300px;
     }
-}
+} */
