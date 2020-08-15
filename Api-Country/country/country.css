@@ -1,0 +1,47 @@
+body {
+    background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+}
+
+/* Animation properties */
+
+.head-title {
+    height: 17em;
+    left: 50%;
+    position: absolute;
+    top: 23%;
+    transform: translate(-50%, -50%);
+    width: 34em;
+    perspective: 800px;
+}
+  
+.byline {
+    color: #fff;
+    font-family: "ITC Serif Gothic", Lato;
+    letter-spacing: 0.4em;
+    text-align: center;
+    text-transform: uppercase;
+    animation: move-byline 10s linear 1;
+}
+
+@keyframes move-byline {
+    0% {
+      transform: translateZ(6em);
+    }
+    100% {
+      transform: translateZ(0);
+    }
+}
+  
+/* Media queries for adjusting to different screen sizes */
+  
+@media only screen and (max-width: 600px) {
+    .head-title {
+      font-size: 10px;
+    }
+}
+  
+@media only screen and (max-width: 480px) {
+    .head-title {
+      font-size: 7px;
+    }
+}
