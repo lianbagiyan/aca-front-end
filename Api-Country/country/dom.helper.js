@@ -1,28 +1,28 @@
-export const createTable = (items) => {
-    const tr = document.createElement('tr');
+// export const createTable = (items) => {
+//     const tr = document.createElement('tr');
 
-        items.forEach((value) => {
-            const td = document.createElement('td');
-            td.textContent = value;
-            tr.append(td);
-        });
+//         items.forEach((value) => {
+//             const td = document.createElement('td');
+//             td.textContent = value;
+//             tr.append(td);
+//         });
 
-    return tr;
-};
+//     return tr;
+// };
 
-export const createCoutryTableRow = ({ name, imgSrc }) => {
-    const tr = document.createElement('tr');
-    const td = document.createElement('td');
-    td.textContent = name;
+// export const createCoutryTableRow = ({ name, imgSrc }) => {
+//     const tr = document.createElement('tr');
+//     const td = document.createElement('td');
+//     td.textContent = name;
 
-    const imgTd = document.createElement('td');
-    const img = document.createElement('img');
-    img.src = imgSrc;
-    img.width = 30;
-    imgTd.append(img);
+//     const imgTd = document.createElement('td');
+//     const img = document.createElement('img');
+//     img.src = imgSrc;
+//     img.width = 30;
+//     imgTd.append(img);
 
-    tr.append(td);
-    tr.append(imgTd);
+//     tr.append(td);
+//     tr.append(imgTd);
 
-    return tr;
-};
+//     return tr;
+// };

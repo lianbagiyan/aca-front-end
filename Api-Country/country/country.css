@@ -1,16 +1,23 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
     background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+}
+
+* {
+    outline: 0;
 }
 
 /* Animation properties */
 
 .head-title {
-    width: 34em;
+    width: 100%;
     height: 145px;
     perspective: 800px;
+    background-color: black;
+}
+
+.line {
+    width: 30em;
 }
   
 .byline {
@@ -20,6 +27,8 @@ body {
     text-align: center;
     text-transform: uppercase;
     animation: move-byline 10s linear 1;
+    margin: 0;
+    padding-top: 20px;
 }
 
 @keyframes move-byline {
@@ -28,6 +37,7 @@ body {
     }
     100% {
       transform: translateZ(0);
+      text-shadow: none;
     }
 }
   
@@ -45,6 +55,40 @@ body {
     }
 }
 
-.country-table {
+/* .country-table {
     background-color: rgb(180, 170, 170);
+} */
+
+.countries-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+}
+
+.countries-box {
+    background-color: #f1c3c36b;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.search-input {
+    border: 1px solid #615959;
+    padding: 10px;
+    width: 190px;
+    background-color: #79717180;
+    color: white;
+    letter-spacing: 5px;
+    font-weight: bold;
 }
