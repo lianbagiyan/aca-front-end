@@ -1,16 +1,15 @@
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
 }
 
 /* Animation properties */
 
 .head-title {
-    height: 17em;
-    left: 50%;
-    position: absolute;
-    top: 23%;
-    transform: translate(-50%, -50%);
     width: 34em;
+    height: 145px;
     perspective: 800px;
 }
   
@@ -44,4 +43,8 @@ body {
     .head-title {
       font-size: 7px;
     }
+}
+
+.country-table {
+    background-color: rgb(180, 170, 170);
 }
