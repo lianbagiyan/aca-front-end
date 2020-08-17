@@ -6,8 +6,8 @@ const email = document.getElementById("email");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  //checkInputs();
-  window.location.href = 'country/country.html'
+  checkInputs();
+  window.location.href = 'country/country.html';
 });
 
 function checkInputs() {

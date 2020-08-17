@@ -19,25 +19,116 @@
 
 const countriesBody = document.querySelector('.countries-box');
 
-fetch('https://restcountries.eu/rest/v2/all')
-    .then((r) => r.json())
-    .then( (r) => {
-        r.forEach(({name, nativeName, capital, area, population, region}) => {
-            let card = createCountryCard([name, nativeName, capital, area, population, region]);
-            countriesBody.append(card);
-        });
-    })
+    function createCard() {
+        let newCard = document.createElement("div");
+        newCard.className = "card";
+        countriesBody.append(newCard);
+      
+        let cardBody = document.createElement("div");
+        cardBody.className = "card-body";
+        newCard.append(cardBody);
+      
+        let cardTitle = document.createElement("h3");
+        cardTitle.className = "card-title";
+        cardBody.append(cardTitle);
+      
+        let hr = document.createElement("hr");
+        hr.className = "line-card";
+        cardBody.append(hr);
+      
+        let items = document.createElement("div");
+        items.className = "items";
+        cardBody.append(items);
+      
+        let titleBox = document.createElement("div");
+        titleBox.className = "title-box item";
+        items.append(titleBox);
+        let titleList = document.createElement("div");
+        titleList.className = "title-list text";
+        titleBox.append(titleList);
+        let titleListText = document.createTextNode("Native Name:");
+        titleList.append(titleListText);
+        let titleName = document.createElement("span");
+        titleName.className = "title-name value";
+        titleBox.append(titleName);
 
-function createCountryCard(values) {
-    const div = document.createElement("div");
-    const ul = document.createElement("ul");
-    ul.className = "country-info";
+        let flagBox = document.createElement("div");
+        flagBox.className = "flag-box item";
+        items.append(flagBox);
+        let flagList = document.createElement("div");
+        flagList.className = "flag-list text";
+        flagBox.append(flagList);
+        let flagText = document.createTextNode("Flag:");
+        flagList.append(flagText);
+        let img = document.createElement("img");
+        img.className = "flag value";
+        flagBox.append(img);
+      
+        let capitalBox = document.createElement("div");
+        capitalBox.className = "capital-box item";
+        items.append(capitalBox);
+        let capitalList = document.createElement("div");
+        capitalList.className = "capital-list text";
+        capitalBox.append(capitalList);
+        let capitalListText = document.createTextNode("Capital:");
+        capitalList.append(capitalListText);
+        let capitalValue = document.createElement("span");
+        capitalValue.className = "capital-value value";
+        capitalBox.append(capitalValue);
+      
+        let regionBox = document.createElement("div");
+        regionBox.className = "region-box item";
+        items.append(regionBox);
+        let regionList = document.createElement("div");
+        regionList.className = "region-list text";
+        regionBox.append(regionList);
+        let regionListText = document.createTextNode("Region:");
+        regionList.append(regionListText);
+        let regionName = document.createElement("span");
+        regionName.className = "region-name value";
+        regionBox.append(regionName);
+      
+        let areaBox = document.createElement("div");
+        areaBox.className = "area-box item";
+        items.append(areaBox);
+        let areaList = document.createElement("div");
+        areaList.className = "area-list text";
+        areaBox.append(areaList);
+        let areaListText = document.createTextNode("Area:");
+        areaList.append(areaListText);
+        let areaText = document.createElement("span");
+        areaText.className = "area-name value";
+        areaBox.append(areaText);
 
-    values.forEach((value) => {
-        const li = document.createElement("li");
-        li.innerText = value;
-        ul.append(li);
-    });
-    div.append(ul);
-    return div;
-}
+        let populationBox = document.createElement("div");
+        populationBox.className = "population-box item";
+        items.append(populationBox);
+        let populationList = document.createElement("div");
+        populationList.className = "population-list text";
+        populationBox.append(populationList);
+        let populationListText = document.createTextNode("Population:");
+        populationList.append(populationListText);
+        let populationText = document.createElement("span");
+        populationText.className = "population-count value";
+        populationBox.append(populationText);
+      }
+      
+      fetch("https://restcountries.eu/rest/v2/all")
+        .then((r) => r.json())
+        .then((r) => {
+          for (let i = 0; i < r.length; i++) {
+            createCard();
+            document.querySelectorAll(".card-title")[i].innerText = r[i].name;
+            document.querySelectorAll(".title-name")[i].innerText = r[i].nativeName;
+            document.querySelectorAll(".flag")[i].src = r[i].flag;
+            document.querySelectorAll(".capital-value")[i].innerText = r[i].capital;
+            document.querySelectorAll(".region-name")[i].innerText = r[i].region;
+            document.querySelectorAll(".area-name")[i].innerText = r[i].area;
+            document.querySelectorAll(".population-count")[i].innerText = r[i].population;
+      
+            console.log(countriesBody);
+          }
+          return countriesBody;
+      });
+
+
