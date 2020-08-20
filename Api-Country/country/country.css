@@ -9,10 +9,14 @@ body {
 
 /* Animation properties */
 
-.head-title {
+.header {
     width: 100%;
-    height: 145px;
     background-color: black;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .line {
@@ -55,9 +59,11 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 30px;
 }
 
 .content {
+    padding-top: 200px;
     display: flex;
     flex-direction: column;
 }
@@ -81,18 +87,23 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 30px 0 30px;
 }
 
 .logout {
-    color: white;
+    color: #d0c9c9;
     padding: 8px 30px;
     font-weight: bold;
+    text-decoration: none;
     letter-spacing: 1px;
+    border: 1px solid #636060;
+    margin-right: 15px;
+    background-color: #524c4ca3;
 }
 
 .logout:hover {
-    border: 1px solid #6f6868;
     background-color: #585252b8;
+    box-shadow: 3px -3px 20px #9c9494;
 }
 
 .search-input {
@@ -108,11 +119,18 @@ body {
 }
 
 .card {
-    width: 400px;
+    width: 300px;
+    height: 350px;
     margin: 25px;
+    position: relative;
     background-color: #1718197a;
     border: 1px solid #4c4848;
     box-shadow: 7px -4px 17px #484545;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 .title {
@@ -121,12 +139,8 @@ body {
     letter-spacing: 10px;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 13px;
+.items {
+    width: 85%;
 }
 
 .item {
@@ -142,6 +156,7 @@ body {
 }
 
 .card-title {
+    text-align: center;
     letter-spacing: 4px;
     font-family: cursive;
     color: #e1dde2;
@@ -150,10 +165,10 @@ body {
 
 .value {
     font-family: monospace;
-    width: 250px;
     text-align: inherit;
     color: #e2d6d6;
     font-size: 12px;
+    padding-left: 45px;
 }
 
 .line-card {
@@ -164,16 +179,24 @@ body {
     width: 30px;
 }
 
+.star-icon {
+    position: absolute;
+    color: white;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+}
+
 /* Media queries for adjusting to different screen sizes */
   
 @media only screen and (max-width: 600px) {
-    .head-title {
+    .header {
       font-size: 10px;
     }
 }
   
 @media only screen and (max-width: 480px) {
-    .head-title {
+    .header {
       font-size: 7px;
     }
 
