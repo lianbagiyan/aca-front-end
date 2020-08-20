@@ -136,5 +136,5 @@ function click() {
   });
 }
 
-let starIcon = countriesBody.querySelectorAll('i'); 
+
 
