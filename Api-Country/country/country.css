@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+}
+
+* {
+    outline: 0;
+}
+
+/* Animation properties */
+
+.header {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.line {
+    width: 30em;
+}
+  
+.byline {
+    color: #fff;
+    font-family: "ITC Serif Gothic", Lato;
+    letter-spacing: 0.4em;
+    text-align: center;
+    text-transform: uppercase;
+    animation: move-byline 10s linear 1;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.home-icon {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.home-span {
+    display: flex;
+    align-items: center;
+}
+
+.home-icon:hover {
+    text-shadow: 2px -2px 4px white;
+}
+
+@keyframes move-byline {
+    0% {
+      transform: translateZ(6em);
+      letter-spacing: 1em;
+    }
+    100% {
+      transform: translateZ(0);
+      text-shadow: none;
+      letter-spacing: 0.4em;
+    }
+}
+
+.countries-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+}
+
+.countries-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.content {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites-text {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding-left: 25px;
+    text-decoration: none;
+}
+
+.favorites-text:hover {
+    text-decoration: underline;
+    text-shadow: 5px -4px 7px #dad0d0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 0 30px;
+}
+
+.logout {
+    color: #d0c9c9;
+    padding: 8px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: 1px solid #636060;
+    margin-right: 15px;
+    background-color: #524c4ca3;
+}
+
+.logout:hover {
+    background-color: #585252b8;
+    box-shadow: 3px -3px 20px #9c9494;
+}
+
+.search-input {
+    border: none;
+    padding: 10px;
+    width: 300px;
+    background-color: #79717100;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #5f5656;
+    color: white;
+    text-align: center;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    margin: 25px;
+    position: relative;
+    background-color: #1718197a;
+    border: 1px solid #4c4848;
+    box-shadow: 7px -4px 17px #484545;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.title {
+    text-align: center;
+    color: indianred;
+    letter-spacing: 10px;
+}
+
+.items {
+    width: 85%;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 0;
+}
+
+.text {
+    width: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+.card-title {
+    text-align: center;
+    letter-spacing: 4px;
+    font-family: cursive;
+    color: #e1dde2;
+    text-shadow: 2px -1px 10px #a7b4bf;
+}
+
+.value {
+    font-family: monospace;
+    text-align: inherit;
+    color: #e2d6d6;
+    font-size: 12px;
+    padding-left: 45px;
+}
+
+.line-card {
+    width: 95%;
+}
+
+.flag {
+    width: 30px;
+}
+
+.star-icon {
+    position: absolute;
+    color: white;
+    top: 20px;
+    right: 20px;
+    font-size: 23px !important;
+}
+
+/* Media queries for adjusting to different screen sizes */
+  
+@media only screen and (max-width: 700px) {
+    .header {
+      font-size: 10px;
+    }
+
+    .logout {
+        margin-top: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+}
+  
+@media only screen and (max-width: 480px) {
+    .header {
+      font-size: 7px;
+    }
+
+    .search-input {
+        width: 100px;
+    }
+}
