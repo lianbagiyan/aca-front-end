@@ -16,30 +16,42 @@ function checkInputs() {
   let loginValue = login.value.trim();
   let emailValue = email.value.trim();
   let passValue = password.value.trim();
+  let value;
 
   if (loginValue === "") {
     setError(login, "Login cannot be blank.");
+    value = false;
   } else if (loginValue.length < 5) {
     setError(login, "Login cannot be less than 5 characters.");
+    value = false;
   } else {
     setSuccess(login);
+    value = true;
   }
 
   if (emailValue === "") {
     setError(email, "Email cannot be blank.");
+    value = false;
   } else if (!isEmail(emailValue)) {
     setError(email, "Email is not valid.");
+    value = false;
   } else {
     setSuccess(email);
+    value = true;
   }
 
   if (passValue === "") {
     setError(password, "Password cannot be blank.");
+    value = false;
   } else if (passValue.length < 5) {
     setError(password, "Password cannot be less than 5 characters.");
+    value = false;
   } else {
     setSuccess(password);
+    value = true;
   }
+
+  return value;
 }
 
 function setError(input, message) {
