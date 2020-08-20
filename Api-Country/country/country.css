@@ -34,6 +34,21 @@ body {
     padding-top: 20px;
 }
 
+.home-icon {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.home-span {
+    display: flex;
+    align-items: center;
+}
+
+.home-icon:hover {
+    text-shadow: 2px -2px 4px white;
+}
+
 @keyframes move-byline {
     0% {
       transform: translateZ(6em);
@@ -182,26 +197,30 @@ body {
 .star-icon {
     position: absolute;
     color: white;
-    top: 15px;
-    right: 15px;
-    font-size: 20px;
+    top: 20px;
+    right: 20px;
+    font-size: 23px !important;
 }
 
 /* Media queries for adjusting to different screen sizes */
   
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .header {
       font-size: 10px;
+    }
+
+    .logout {
+        margin-top: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
     }
 }
   
 @media only screen and (max-width: 480px) {
     .header {
       font-size: 7px;
-    }
-
-    .menu {
-        flex-direction: column;
     }
 
     .search-input {

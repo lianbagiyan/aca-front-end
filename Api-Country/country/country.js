@@ -115,26 +115,26 @@ fetch("https://restcountries.eu/rest/v2/all")
     return countriesBody;
   });
 
-  const input = document.querySelector(".search-input");
-  const star = document.getElementsByClassName('star-icon');
+const input = document.querySelector(".search-input");
 
-  input.addEventListener('keyup', click);
-  
-  function click() {
-    let filter, item,  i, value;
-    filter = input.value.toUpperCase();
-    item = countriesBody.querySelectorAll(".card");
+input.addEventListener("keyup", click);
 
-    item.forEach(element => {
-      let title = element.querySelector('.card-title');
-      value = title.innerText;
-      
-      if (value.toUpperCase().indexOf(filter) > -1) {
-        element.style.display = "flex";
-      } else {
-        element.style.display = "none";
-      }
-    });
-  }
+function click() {
+  let filter, item, value;
+  filter = input.value.toUpperCase();
+  item = countriesBody.querySelectorAll(".card");
 
-  
+  item.forEach((element) => {
+    let title = element.querySelector(".card-title");
+    value = title.innerText;
+
+    if (value.toUpperCase().indexOf(filter) > -1) {
+      element.style.display = "";
+    } else {
+      element.style.display = "none";
+    }
+  });
+}
+
+let starIcon = countriesBody.querySelectorAll('i'); 
+
