@@ -1,5 +1,3 @@
-//import { createCard } from './dom.helper.js';
-
 const countriesBody = document.querySelector('.countries-box');
 
 function createCard() {
@@ -136,6 +134,5 @@ function click() {
   });
 }
 
-
-
+const starIcon = countriesBody.getElementsByTagName('i');
 
