@@ -1,4 +1,4 @@
-# Welcome my site about my favorite hobby - dancing!
+# Welcome my site
 
 #### Here I used HTML5 & CSS3 (with BEM methodology, FlexBox model, Grid sistem). I used my own design with my own design system.
 
